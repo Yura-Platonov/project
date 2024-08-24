@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink, Link, useLocation } from 'react-router-dom';
 import { ReactComponent as Logo } from '../../images/Logo.svg';
 import css from './Header.module.css';
 
@@ -24,7 +24,10 @@ const Header = () => {
   return (
     <header className={css.header}>
     <div className={borderBottomClass}></div>
+    <div className={css.borderBottom}></div>
+    <Link to="/" >
       <Logo />
+    </Link>
       <nav className={css.navigation}>
         <div  className={css.navList}>
             <NavLink  to="/" className={css.navLink}>Domy</NavLink>
