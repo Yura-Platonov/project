@@ -13,15 +13,6 @@
     background-position: 0px 0px, 20px 0px;
   }
   
-  .borderBottom {
-    position: absolute;
-    z-index: 0;
-    bottom: 0;
-    left: 460px;
-    right: 140px;
-    height: 12px;
-    background-color: #FFA502;
-}
 
   .navigation {
     display: flex;
@@ -58,3 +49,42 @@
     background: #FFA502 ;  
   }
   
+  .borderBottomHome {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 460px;
+    right: 470px;
+    height: 12px;
+    background-color: #FFA502;
+  }
+  
+  .borderBottomTechnika {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 460px;
+    right: 260px;
+    height: 12px;
+    background-color: #FFA502;
+  }
+  
+  .borderBottomKariera {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 460px;
+    right: 140px;
+    height: 12px;
+    background-color: #FFA502;
+  }
+  
+  .borderBottomDefault {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 460px;
+    right: 140px;
+    height: 12px;
+    background-color: #FFA502;
+  }
