@@ -6,6 +6,7 @@ import css from './Header.module.css';
 const Header = () => {
   return (
     <header className={css.header}>
+    <div className={css.borderBottom}></div>
       <Logo />
       <nav className={css.navigation}>
         <div  className={css.navList}>

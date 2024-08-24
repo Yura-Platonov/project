@@ -1,5 +1,6 @@
 
 .header {
+  position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -12,6 +13,16 @@
     background-position: 0px 0px, 20px 0px;
   }
   
+  .borderBottom {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+    left: 460px;
+    right: 140px;
+    height: 12px;
+    background-color: #FFA502;
+}
+
   .navigation {
     display: flex;
     height: 100%;
@@ -44,5 +55,6 @@
   .navLink:hover {
     cursor: pointer;
     color: white;
-    background: #FFA502 ;  }
+    background: #FFA502 ;  
+  }
   
