@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import './index.css';
+// import './index.css';
 import Header from './components/Header/Header';
 import Domy from './pages/Domy/Domy';
 import Kariera from './pages/Kariera/Kariera';

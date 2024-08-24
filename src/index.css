@@ -25,3 +25,10 @@ ul {
   margin-left: auto;
   margin-right: auto;
 }
+
+.active{
+  color: white;
+  background: #FFA502;
+  padding: 10px 20px;
+  align-items: start;
+}
