@@ -16,10 +16,12 @@ const TechnikaSeventh = () => {
 	const openModal = index => {
 		setCurrentImageIndex(index)
 		setIsModalOpen(true)
+		document.body.style.overflow = 'hidden'
 	}
 
 	const closeModal = () => {
 		setIsModalOpen(false)
+		document.body.style.overflow = 'auto'
 	}
 
 	const handleNextImage = () => {

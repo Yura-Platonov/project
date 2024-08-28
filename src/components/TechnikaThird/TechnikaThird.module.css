@@ -11,6 +11,7 @@
 .splideImg {
 	width: 970px;
 	height: 700px;
+	object-fit: cover;
 }
 
 .sliderContainer {
@@ -70,7 +71,7 @@
 }
 
 .modalImage {
-	width: 970px;
+	max-width: 970px;
 	height: 700px;
 	border-radius: 20px;
 }
