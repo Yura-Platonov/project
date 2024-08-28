@@ -2,9 +2,9 @@ import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import React, { useState } from 'react'
 import Modal from 'react-modal'
-import image1 from '../../images/Photo1.1.jpg'
-import image2 from '../../images/Photo1.2.jpg'
-import image3 from '../../images/Photo1.3.jpg'
+import image1 from '../../images/technikaSection7.1.jpg'
+import image2 from '../../images/technikaSection7.2.jpg'
+import image3 from '../../images/technikaSection7.3.jpg'
 import css from './TechnikaSeventh.module.css'
 
 const images = [image1, image2, image3]
@@ -47,6 +47,7 @@ const TechnikaSeventh = () => {
 							<img
 								src={image}
 								alt={`Slide ${index + 1}`}
+								className={css.splideImg}
 								onClick={() => openModal(index)}
 							/>
 						</SplideSlide>
