@@ -7,10 +7,12 @@ import TechnikaSecond from '../../components/TechnikaSecond/TechnikaSecond'
 import TechnikaSeventh from '../../components/TechnikaSeventh/TechnikaSeventh'
 import TechnikaSixth from '../../components/TechnikaSixth/TechnikaSixth'
 import TechnikaThird from '../../components/TechnikaThird/TechnikaThird'
+import TechnikaWelcome from '../../components/TechnikaWelcome/TechnikaWelcome'
 
 const Technika = () => {
 	return (
 		<>
+			<TechnikaWelcome />
 			<TechnikaFirst />
 			<TechnikaSecond />
 			<TechnikaThird />
