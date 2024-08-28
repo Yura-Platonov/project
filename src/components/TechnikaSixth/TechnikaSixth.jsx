@@ -5,11 +5,11 @@ import Modal from 'react-modal'
 import image1 from '../../images/Photo1.1.jpg'
 import image2 from '../../images/Photo1.2.jpg'
 import image3 from '../../images/Photo1.3.jpg'
-import css from './TechnikaFourth.module.css'
+import css from './TechnikaSixth.module.css'
 
 const images = [image1, image2, image3]
 
-const TechnikaFourth = () => {
+const TechnikaSixth = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
@@ -34,7 +34,9 @@ const TechnikaFourth = () => {
 
 	return (
 		<section className={css.technikaSection}>
-			<h2 className={css.technikaTitle}>DIECI PEGASUS 50.21 OBROTOWA</h2>
+			<h2 className={css.technikaTitle}>
+				MERCEDES ACTROS SAMOCHOD CIEZAROWE Z HDS
+			</h2>
 			<div className={css.sliderContainer}>
 				<Splide
 					options={{ rewind: true, pagination: false }}
@@ -55,47 +57,24 @@ const TechnikaFourth = () => {
 				<li className={css.technikaItem}>
 					<h3 className={css.technikaSubTitle}>WYMIARY I MASY </h3>
 					<ul className={css.specificationList}>
-						<li className={css.specificationItem}>środek ciężkości - 500 mm</li>
+						<li className={css.specificationItem}>pojemność - 10 518 cm3</li>
 						<li className={css.specificationItem}>
-							nominalny obciąż. gran. przy LSP - 5t
+							dopuszczalna masa całkowita pojazdu - 26 000 kg
 						</li>
 						<li className={css.specificationItem}>
-							wysokość nad ziemią - 360mm
+							{' '}
+							długość przestrzeni ładunkowej - 6 600 mm
 						</li>
 						<li className={css.specificationItem}>
-							maksymalna długość - 7150mm
-						</li>
-						<li className={css.specificationItem}>wysokość kabiny - 3020mm</li>
-						<li className={css.specificationItem}>
-							szerokość maszyny - 2380mm
-						</li>
-						<li className={css.specificationItem}>promień skrętu - 4430mm</li>
-					</ul>
-				</li>
-				<li className={css.technikaItem}>
-					<h3 className={css.technikaSubTitle}>
-						PARAMETRY ROBOCZE UKŁADU JEZDNEGO{' '}
-					</h3>
-					<ul className={css.specificationList}>
-						<li className={css.specificationItem}>
-							maksymalny udźwig - 5000 kg
+							szerokość przestrzeni ładunkowej - 2 490 mm
 						</li>
 						<li className={css.specificationItem}>
-							maksymalna wysokość podnoszenia - 20,50 m
+							wysokość przestrzeni ładunkowej - 1 000 mm
 						</li>
 						<li className={css.specificationItem}>
-							maksymalna wysokość na podporach stabilizujących - 20,50 m 
+							całkowita masa holowania - 40000 kg
 						</li>
-						<li className={css.specificationItem}>
-							maksymalna wysokość na kołach - 20,30 m
-						</li>
-						<li className={css.specificationItem}>
-							siła szarpnięcia - 5700 daN
-						</li>
-						<li className={css.specificationItem}>siła pociągowa - 9400 daN</li>
-						<li className={css.specificationItem}>
-							maksymalna prędkość - 40 km/h
-						</li>
+						<li className={css.specificationItem}>ładowność - 12330 kg</li>
 					</ul>
 				</li>
 			</ul>
@@ -103,24 +82,18 @@ const TechnikaFourth = () => {
 				<div className={css.specificationItemDiv}></div>
 				<p className={css.specificationItemText}>
 					<span className={css.specificationItemTextAccent}>
-						DIECI PEGASUS 50.21 OBROTOWA
+						MERCEDES ACTROS z HDS
 					</span>{' '}
-					- PEGASUS 50.21 wyróżnia się prostotą obsługi, wytrzymałością oraz
-					niezawodnością. Maszyna posiada pełny komplet zabezpieczeń i urządzeń
-					ochronnych, w tym ogranicznik udźwigu oraz awangardowe oprzyrządowanie
-					zapewniające pełną kontrolę nad maszyną w każdej sytuacji, niezależnie
-					od obciążenia, ładunku oraz prędkości. W skład wyposażenia wchodzą
-					również podpory stabilizujące z funkcją automatycznego poziomowania
-					oraz system elektronicznego sterowania (wykonany w technologii
-					CANBUS), co pozwala na pracę w dowolnej pozycji.
-					<br />
-					<br />
-					Seria PEGASUS obejmuje podnośniki teleskopowe (zarówno z obrotem
-					ciągłym 360°, jak i nieciągłym) charakteryzujące się wyjątkową
-					elastycznością zastosowań. Współpracują z dużą gamą akcesoriów, dzięki
-					którym nadają się do wielu prac. W ten sposób jedna maszyna może
-					służyć zarówno jako podnośnik teleskopowy, platforma do prac
-					napowietrznych oraz żuraw.
+					- to samochód ciężarowy, który łączy wysoką wydajność z
+					wszechstronnością. Model ACTROS jest znany ze swojej niezawodności,
+					mocy i nowoczesnych technologii. Jest wyposażony w hydrauliczny dźwig
+					(HDS), który umożliwia przeprowadzanie prac załadunkowych i
+					rozładunkowych bez konieczności używania dodatkowego sprzętu. Ten
+					pojazd jest idealny do transportu ładunków wielkogabarytowych na
+					placach budowy lub w innych branżach, gdzie potrzebne jest szybkie
+					wykonanie ciężkich zadań. Dzięki swojej wytrzymałości i efektywności,
+					MERCEDES ACTROS z HDS jest doskonałym wyborem dla profesjonalistów,
+					którzy szukają niezawodnego i wielofunkcyjnego samochodu
 				</p>
 			</div>
 
@@ -149,4 +122,4 @@ const TechnikaFourth = () => {
 	)
 }
 
-export default TechnikaFourth
+export default TechnikaSixth
