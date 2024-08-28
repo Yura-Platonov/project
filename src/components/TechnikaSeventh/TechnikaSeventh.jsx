@@ -1,10 +1,10 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import React, { useState } from 'react'
-import Modal from 'react-modal'
 import image1 from '../../images/technikaSection7.1.jpg'
 import image2 from '../../images/technikaSection7.2.jpg'
 import image3 from '../../images/technikaSection7.3.jpg'
+import ImageModal from '../ImageModal/ImageModal'
 import css from './TechnikaSeventh.module.css'
 
 const images = [image1, image2, image3]
@@ -97,27 +97,14 @@ const TechnikaSeventh = () => {
 				</p>
 			</div>
 
-			<Modal
-				isOpen={isModalOpen}
-				onRequestClose={closeModal}
-				className={css.modal}
-				overlayClassName={css.overlay}
-			>
-				<button onClick={closeModal} className={css.closeButton}>
-					Закрыть
-				</button>
-				<button onClick={handlePrevImage} className={css.navButton}>
-					Назад
-				</button>
-				<img
-					src={images[currentImageIndex]}
-					alt={`Modal Slide ${currentImageIndex + 1}`}
-					className={css.modalImage}
-				/>
-				<button onClick={handleNextImage} className={css.navButton}>
-					Вперед
-				</button>
-			</Modal>
+			<ImageModal
+				isModalOpen={isModalOpen}
+				closeModal={closeModal}
+				currentImageIndex={currentImageIndex}
+				images={images}
+				handleNextImage={handleNextImage}
+				handlePrevImage={handlePrevImage}
+			/>
 		</section>
 	)
 }

@@ -1,0 +1,116 @@
+.modal {
+	position: relative;
+	/* width: 80%; */
+	/* max-width: 600px; */
+	/* max-width: 80vw; */
+	width: 970px;
+	height: 700px;
+	margin: 50px auto;
+	padding: 20px;
+	border-radius: 10px;
+	outline: none;
+	z-index: 10;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.75);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 10;
+}
+
+.closeButton {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	width: 30px;
+	height: 30px;
+	padding: 5px;
+	background: #ccc;
+	border-radius: 50%;
+	border: none;
+	opacity: 0.7;
+	cursor: pointer;
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
+.closeModalSvg {
+	width: 20px;
+	height: 20px;
+	fill: #000;
+}
+
+.navButtonLeft {
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	width: 30px;
+	height: 30px;
+	padding: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transform: translateY(-50%);
+	opacity: 0.7;
+	background: #ccc;
+	border: 0;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 1;
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.navButtonRight {
+	position: absolute;
+	top: 50%;
+	left: 950px;
+	width: 30px;
+	height: 30px;
+	padding: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transform: translateY(-50%);
+	opacity: 0.7;
+	background: #ccc;
+	border: 0;
+	border-radius: 50%;
+	cursor: pointer;
+	z-index: 1;
+
+	&:hover {
+		opacity: 0.9;
+	}
+}
+
+.modalArrowLeft {
+	transform: rotate(180deg);
+	width: 16px;
+	height: 16px;
+}
+.modalArrowRight {
+	width: 16px;
+	height: 16px;
+}
+
+.modalImage {
+	width: 970px;
+	height: 700px;
+	border-radius: 20px;
+	/* object-fit: contain; */
+}
