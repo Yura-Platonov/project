@@ -7,7 +7,7 @@ import image3 from '../../images/technikaSection3.3.jpg'
 import image4 from '../../images/technikaSection3.4.jpg'
 import image5 from '../../images/technikaSection3.5.jpg'
 import ImageModal from '../ImageModal/ImageModal'
-import css from './TechnikaThird.module.css'
+import css from '../TechnikaFirst/TechnikaFirst.module.css'
 
 const images = [image1, image2, image3, image4, image5]
 
@@ -57,13 +57,17 @@ const TechnikaThird = () => {
 				</Splide>
 			</div>
 			<ul className={css.technikaList}>
-				<li className={css.technikaItem}>
+				<li className={`${css.technikaItem} ${css.technikaItemThird}`}>
 					<h3 className={css.technikaSubTitle}>
 						PARAMETRY ROBOCZE UKŁADU ŁADOWARKOWEGO
 					</h3>
-					<ul className={css.specificationList}>
+					<ul
+						className={`${css.specificationList} ${css.specificationListThird}`}
+					>
 						Stabilizatory opuszczone:
-						<li className={css.specificationItem}>
+						<li
+							className={`${css.specificationItem} ${css.specificationItemThird}`}
+						>
 							udźwig maksymalny – 4 000 kg
 						</li>
 						<li className={css.specificationItem}>
@@ -79,9 +83,13 @@ const TechnikaThird = () => {
 							zasięg maksymalny– 12,50 m;
 						</li>
 					</ul>
-					<ul className={css.specificationList}>
+					<ul
+						className={`${css.specificationList} ${css.specificationListThird}`}
+					>
 						Stabilizatory podniesione:
-						<li className={css.specificationItem}>
+						<li
+							className={`${css.specificationItem} ${css.specificationItemThird}`}
+						>
 							udźwig maksymalny – 4 000 kg
 						</li>
 						<li className={css.specificationItem}>
@@ -98,7 +106,7 @@ const TechnikaThird = () => {
 						</li>
 					</ul>
 				</li>
-				<li className={css.technikaItem}>
+				<li className={`${css.technikaItem} ${css.technikaItemThird}`}>
 					<h3 className={css.technikaSubTitle}>WYMIARY I MASY</h3>
 					<ul className={css.specificationList}>
 						<li className={css.specificationItem}>
@@ -117,7 +125,9 @@ const TechnikaThird = () => {
 					</ul>
 				</li>
 			</ul>
-			<div className={css.technikaItemContainer}>
+			<div
+				className={`${css.technikaItemContainer} ${css.technikaItemContainerThird}`}
+			>
 				<div className={css.specificationItemDiv}></div>
 				<p className={css.specificationItemText}>
 					<span className={css.specificationItemTextAccent}>

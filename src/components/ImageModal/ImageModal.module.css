@@ -1,8 +1,5 @@
-.modal {
+/* .modal {
 	position: relative;
-	/* width: 80%; */
-	/* max-width: 600px; */
-	/* max-width: 80vw; */
 	width: 970px;
 	height: 700px;
 	margin: 50px auto;
@@ -112,10 +109,8 @@
 	width: 970px;
 	height: 700px;
 	border-radius: 20px;
-	/* object-fit: contain; */
-}
+} */
 
-/* 
 .modal {
 	position: relative;
 	width: 970px;
@@ -142,8 +137,8 @@
 
 .closeButton {
 	position: absolute;
-	top: 30px;
-	right: 30px;
+	top: 0;
+	right: -30px;
 	width: 30px;
 	height: 30px;
 	padding: 5px;
@@ -228,4 +223,4 @@
 	height: 100%;
 	border-radius: 20px;
 	object-fit: contain;
-} */
+}

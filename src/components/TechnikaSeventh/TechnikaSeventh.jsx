@@ -5,7 +5,7 @@ import image1 from '../../images/technikaSection7.1.jpg'
 import image2 from '../../images/technikaSection7.2.jpg'
 import image3 from '../../images/technikaSection7.3.jpg'
 import ImageModal from '../ImageModal/ImageModal'
-import css from './TechnikaSeventh.module.css'
+import css from '../TechnikaFirst/TechnikaFirst.module.css'
 
 const images = [image1, image2, image3]
 
@@ -57,7 +57,7 @@ const TechnikaSeventh = () => {
 				</Splide>
 			</div>
 			<ul className={css.technikaList}>
-				<li className={css.technikaItem}>
+				<li className={`${css.technikaItem} ${css.technikaItemSolo}`}>
 					<h3 className={css.technikaSubTitle}>WYMIARY I MASY </h3>
 					<ul className={css.specificationList}>
 						<li className={css.specificationItem}>ciężar - 450mm</li>
@@ -79,7 +79,9 @@ const TechnikaSeventh = () => {
 					</ul>
 				</li>
 			</ul>
-			<div className={css.technikaItemContainer}>
+			<div
+				className={`${css.technikaItemContainer} ${css.technikaItemContainerSolo}`}
+			>
 				<div className={css.specificationItemDiv}></div>
 				<p className={css.specificationItemText}>
 					<span className={css.specificationItemTextAccent}>

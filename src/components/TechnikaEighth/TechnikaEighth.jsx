@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import image1 from '../../images/technikaSection8.1.jpg'
 import image2 from '../../images/technikaSection8.2.jpg'
 import ImageModal from '../ImageModal/ImageModal'
-import css from './TechnikaEighth.module.css'
+import css from '../TechnikaFirst/TechnikaFirst.module.css'
 
 const images = [image1, image2]
 
@@ -54,7 +54,7 @@ const TechnikaEighth = () => {
 				</Splide>
 			</div>
 			<ul className={css.technikaList}>
-				<li className={css.technikaItem}>
+				<li className={`${css.technikaItem} ${css.technikaItemEighth}`}>
 					<h3 className={css.technikaSubTitle}>WYMIARY I MASY </h3>
 					<ul className={css.specificationList}>
 						<li className={css.specificationItem}>
@@ -83,7 +83,9 @@ const TechnikaEighth = () => {
 					</ul>
 				</li>
 			</ul>
-			<div className={css.technikaItemContainer}>
+			<div
+				className={`${css.technikaItemContainer} ${css.technikaItemContainerEighth}`}
+			>
 				<div className={css.specificationItemDiv}></div>
 				<p className={css.specificationItemText}>
 					<span className={css.specificationItemTextAccent}>

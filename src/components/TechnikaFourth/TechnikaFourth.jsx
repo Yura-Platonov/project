@@ -4,8 +4,7 @@ import React, { useState } from 'react'
 import image1 from '../../images/technikaSection4.1.jpg'
 import image2 from '../../images/technikaSection4.2.jpg'
 import ImageModal from '../ImageModal/ImageModal'
-
-import css from './TechnikaFourth.module.css'
+import css from '../TechnikaFirst/TechnikaFirst.module.css'
 
 const images = [image1, image2]
 

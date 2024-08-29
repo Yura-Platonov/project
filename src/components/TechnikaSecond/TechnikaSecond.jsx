@@ -6,7 +6,7 @@ import image2 from '../../images/technikaSection2.2.jpg'
 import image3 from '../../images/technikaSection2.3.jpg'
 import image4 from '../../images/technikaSection2.4.jpg'
 import ImageModal from '../ImageModal/ImageModal'
-import css from './TechnikaSecond.module.css'
+import css from '../TechnikaFirst/TechnikaFirst.module.css'
 
 const images = [image1, image2, image3, image4]
 
