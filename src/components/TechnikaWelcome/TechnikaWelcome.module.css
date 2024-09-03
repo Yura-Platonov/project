@@ -29,6 +29,7 @@
 }
 
 .textPhone {
+	display: block;
 	font-size: 32px;
 	font-weight: 600;
 	line-height: 1.2;
@@ -37,4 +38,5 @@
 	padding-top: 10px;
 	color: #fff;
 	text-shadow: 0 4px 4px #00000099;
+	text-decoration: none;
 }

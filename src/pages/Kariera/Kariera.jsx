@@ -1,12 +1,14 @@
-import React from 'react';
+import React from 'react'
+import { KarieraInCompany } from '../../components/KarieraInCompany/KarieraInCompany'
+import KarieraWelcome from '../../components/KarieraWelcome/KarieraWelcome'
 
 const Kariera = () => {
-  return (
-    <div>
-      <h1>Kariera Page</h1>
-      <p>Welcome to the Kariera page! This is a placeholder component.</p>
-    </div>
-  );
-};
+	return (
+		<>
+			<KarieraWelcome />
+			<KarieraInCompany />
+		</>
+	)
+}
 
-export default Kariera;
+export default Kariera
