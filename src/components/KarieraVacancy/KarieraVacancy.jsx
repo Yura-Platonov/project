@@ -1,7 +1,9 @@
 import React from 'react'
+import KarieraDeutch from '../../images/KarieraDeutch.jpg'
 import KarieraMylar from '../../images/KarieraMylar.jpg'
 import KarieraOpalybka from '../../images/KarieraOpalybka.jpg'
 import KarieraRazno from '../../images/KarieraRazno.jpg'
+import KarieraVideo from '../../images/KarieraVideo.mp4'
 import KarieraZbroyaj from '../../images/KarieraZbroyaj.jpg'
 
 import css from './KarieraVacancy.module.css'
@@ -12,11 +14,7 @@ export const KarieraVacancy = () => {
 			<h2 className={css.karieraTitle}>АКТУАЛЬНІ ВАКАНСІЇ</h2>
 			<ul className={css.karieraList}>
 				<li className={css.karieraItem}>
-					<img
-						src={KarieraMylar}
-						alt='element'
-						className={css.karieraImg}
-					></img>
+					<img src={KarieraMylar} alt='element' className={css.karieraImg} />
 					<div className={css.karieraItemContainer}>
 						<div className={css.karieraItemDiv}>
 							<h3 className={css.karieraSubTitle}>Муляр(Murarz)</h3>
@@ -57,11 +55,7 @@ export const KarieraVacancy = () => {
 					</div>
 				</li>
 				<li className={css.karieraItem}>
-					<img
-						src={KarieraZbroyaj}
-						alt='element'
-						className={css.karieraImg}
-					></img>
+					<img src={KarieraZbroyaj} alt='element' className={css.karieraImg} />
 					<div className={css.karieraItemContainer}>
 						<div className={css.karieraItemDiv}>
 							<h3 className={css.karieraSubTitle}>Зброяж(Zbrojarz)</h3>
@@ -114,11 +108,7 @@ export const KarieraVacancy = () => {
 					</div>
 				</li>
 				<li className={css.karieraItem}>
-					<img
-						src={KarieraOpalybka}
-						alt='element'
-						className={css.karieraImg}
-					></img>
+					<img src={KarieraOpalybka} alt='element' className={css.karieraImg} />
 					<div className={css.karieraItemContainer}>
 						<div className={css.karieraItemDiv}>
 							<h3 className={css.karieraSubTitle}>Опалубщик (Cieślar)</h3>
@@ -163,11 +153,7 @@ export const KarieraVacancy = () => {
 					</div>
 				</li>
 				<li className={css.karieraItem}>
-					<img
-						src={KarieraRazno}
-						alt='element'
-						className={css.karieraImg}
-					></img>
+					<img src={KarieraRazno} alt='element' className={css.karieraImg} />
 					<div className={css.karieraItemContainer}>
 						<div className={css.karieraItemDiv}>
 							<h3 className={css.karieraSubTitle}>
@@ -213,6 +199,35 @@ export const KarieraVacancy = () => {
 					</div>
 				</li>
 			</ul>
+			<div className={css.containerFlex}>
+				<div className={css.containerFlexItem}>
+					<div className={css.imgFlexContainer}>
+						<img src={KarieraDeutch} alt='Deutch' className={css.imgFlex} />
+						<p className={css.imgFlexText}>Робота в Німеччині!</p>
+					</div>
+					<p className={css.infoText}>
+						На будівництво в Німеччині шукаємо працівників!
+					</p>
+					<ul className={css.infoList}>
+						Потрібні фахівці для виконання таких робіт:
+						<li className={css.infoItem}>внутрішні роботи;</li>
+						<li className={css.infoItem}>фасадні роботи; </li>
+						<li className={css.infoItem}>покрівля даху; </li>
+						<li className={css.infoItem}>бетонні роботи; </li>
+						<li className={css.infoItem}>різноробочі. </li>
+					</ul>
+					<p className={css.infoSmallText}>
+						За подробицями звертайтеся за телефоном{' '}
+						<a href='tel:+48605055346' className={css.textPhone}>
+							+48 605 055 346
+						</a>{' '}
+					</p>
+				</div>
+				<video controls className={css.videoPlayer}>
+					<source src={KarieraVideo} type='video/mp4' />
+					Your brouser doesnt support video{' '}
+				</video>
+			</div>
 		</section>
 	)
 }
