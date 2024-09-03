@@ -1,5 +1,6 @@
 import React from 'react'
 import { KarieraInCompany } from '../../components/KarieraInCompany/KarieraInCompany'
+import { KarieraVacancy } from '../../components/KarieraVacancy/KarieraVacancy'
 import KarieraWelcome from '../../components/KarieraWelcome/KarieraWelcome'
 
 const Kariera = () => {
@@ -7,6 +8,7 @@ const Kariera = () => {
 		<>
 			<KarieraWelcome />
 			<KarieraInCompany />
+			<KarieraVacancy />
 		</>
 	)
 }
