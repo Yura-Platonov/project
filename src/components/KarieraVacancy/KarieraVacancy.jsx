@@ -199,34 +199,36 @@ export const KarieraVacancy = () => {
 					</div>
 				</li>
 			</ul>
-			<div className={css.containerFlex}>
-				<div className={css.containerFlexItem}>
-					<div className={css.imgFlexContainer}>
-						<img src={KarieraDeutch} alt='Deutch' className={css.imgFlex} />
-						<p className={css.imgFlexText}>Робота в Німеччині!</p>
-					</div>
-					<p className={css.infoText}>
-						На будівництво в Німеччині шукаємо працівників!
-					</p>
-					<ul className={css.infoList}>
-						Потрібні фахівці для виконання таких робіт:
-						<li className={css.infoItem}>внутрішні роботи;</li>
-						<li className={css.infoItem}>фасадні роботи; </li>
-						<li className={css.infoItem}>покрівля даху; </li>
-						<li className={css.infoItem}>бетонні роботи; </li>
-						<li className={css.infoItem}>різноробочі. </li>
-					</ul>
-					<p className={css.infoSmallText}>
-						За подробицями звертайтеся за телефоном{' '}
-						<a href='tel:+48605055346' className={css.textPhone}>
-							+48 605 055 346
-						</a>{' '}
-					</p>
+			<div className={css.containerWorkGermany}>
+				<div className={css.karieraItemDiv}>
+					<h3 className={css.karieraSubTitle}>Робота в Німеччині!</h3>
 				</div>
-				<video controls className={css.videoPlayer}>
-					<source src={KarieraVideo} type='video/mp4' />
-					Your brouser doesnt support video{' '}
-				</video>
+				<div className={css.containerFlex}>
+					<div className={css.containerFlexItem}>
+						<img src={KarieraDeutch} alt='Deutch' className={css.imgFlex} />
+						<p className={css.infoText}>
+							На будівництво в Німеччині шукаємо працівників!
+						</p>
+						<ul className={css.infoList}>
+							Потрібні фахівці для виконання таких робіт:
+							<li className={css.infoItem}>внутрішні роботи;</li>
+							<li className={css.infoItem}>фасадні роботи; </li>
+							<li className={css.infoItem}>покрівля даху; </li>
+							<li className={css.infoItem}>бетонні роботи; </li>
+							<li className={css.infoItem}>різноробочі. </li>
+						</ul>
+						<p className={css.infoSmallText}>
+							За подробицями звертайтеся за телефоном{' '}
+							<a href='tel:+48605055346' className={css.textPhone}>
+								+48 605 055 346
+							</a>{' '}
+						</p>
+					</div>
+					<video controls className={css.videoPlayer}>
+						<source src={KarieraVideo} type='video/mp4' />
+						Your brouser doesnt support video{' '}
+					</video>
+				</div>
 			</div>
 		</section>
 	)
