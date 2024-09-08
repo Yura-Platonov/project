@@ -1,27 +1,38 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
+import video1 from '../../images/technikaSection6.0.mp4'
 import image1 from '../../images/technikaSection6.1.jpg'
 import image2 from '../../images/technikaSection6.2.jpg'
 import image3 from '../../images/technikaSection6.3.jpg'
 import ImageModal from '../ImageModal/ImageModal'
 import css from '../TechnikaFirst/TechnikaFirst.module.css'
 
-const images = [image1, image2, image3]
+const images = [video1, image1, image2, image3]
 
 const TechnikaSixth = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
+	const videoRef = useRef(null)
 
-	const openModal = index => {
+	const openModal = (index, event) => {
+		event.preventDefault() // предотвращаем стандартное поведение
 		setCurrentImageIndex(index)
 		setIsModalOpen(true)
 		document.body.style.overflow = 'hidden'
+
+		if (index === 0 && videoRef.current) {
+			videoRef.current.pause() // ставим видео на паузу
+		}
 	}
 
 	const closeModal = () => {
 		setIsModalOpen(false)
 		document.body.style.overflow = 'auto'
+
+		// if (currentImageIndex === 0 && videoRef.current) {
+		// 	videoRef.current.play()
+		// }
 	}
 
 	const handleNextImage = () => {
@@ -44,14 +55,26 @@ const TechnikaSixth = () => {
 					options={{ rewind: true, pagination: false }}
 					aria-label='React Splide'
 				>
-					{images.map((image, index) => (
+					{images.map((media, index) => (
 						<SplideSlide key={index}>
-							<img
-								src={image}
-								alt={`Slide ${index + 1}`}
-								className={css.splideImg}
-								onClick={() => openModal(index)}
-							/>
+							{index === 0 ? (
+								<video
+									ref={videoRef}
+									className={css.splideImg}
+									controls
+									onClick={e => openModal(index, e)}
+								>
+									<source src={media} type='video/mp4' />
+									Your brouser doesnt support video.
+								</video>
+							) : (
+								<img
+									src={media}
+									alt={`Slide ${index + 1}`}
+									className={css.splideImg}
+									onClick={e => openModal(index, e)}
+								/>
+							)}
 						</SplideSlide>
 					))}
 				</Splide>

@@ -10,6 +10,8 @@ const ImageModal = ({
 	handleNextImage,
 	handlePrevImage,
 }) => {
+	const isVideo = images[currentImageIndex].includes('.mp4')
+
 	return (
 		<Modal
 			isOpen={isModalOpen}
@@ -43,11 +45,23 @@ const ImageModal = ({
 					<path d='m15.5 0.932-4.3 4.38 14.5 14.6-14.5 14.5 4.3 4.4 14.6-14.6 4.4-4.3-4.4-4.4-14.6-14.6z'></path>
 				</svg>
 			</button>
-			<img
+			{/* <img
 				src={images[currentImageIndex]}
 				alt={`Modal Slide ${currentImageIndex + 1}`}
 				className={css.modalImage}
-			/>
+			/> */}
+			{isVideo ? (
+				<video className={css.modalImage} controls autoPlay>
+					<source src={images[currentImageIndex]} type='video/mp4' />
+					Ваш браузер не поддерживает видео.
+				</video>
+			) : (
+				<img
+					src={images[currentImageIndex]}
+					alt={`Modal Slide ${currentImageIndex + 1}`}
+					className={css.modalImage}
+				/>
+			)}
 			<button onClick={handleNextImage} className={css.navButtonRight}>
 				<svg
 					xmlns='http://www.w3.org/2000/svg'

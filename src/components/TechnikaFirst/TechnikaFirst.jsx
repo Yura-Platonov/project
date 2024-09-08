@@ -2,14 +2,14 @@ import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import React, { useState } from 'react'
 import image1 from '../../images/technikaSection1.1.jpg'
-import image2 from '../../images/technikaSection1.2.jpg'
+// import image2 from '../../images/technikaSection1.2.jpg'
 import image3 from '../../images/technikaSection1.3.jpg'
 import image4 from '../../images/technikaSection1.4.jpg'
 import image5 from '../../images/technikaSection1.5.jpg'
 import ImageModal from '../ImageModal/ImageModal'
 import css from './TechnikaFirst.module.css'
 
-const images = [image1, image2, image3, image4, image5]
+const images = [image1, image3, image4, image5]
 
 const TechnikaFirst = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
