@@ -1,4 +1,22 @@
 .header {
+	position: sticky;
+	top: 0;
+	z-index: 100;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 90px;
+	box-sizing: border-box;
+	padding: 20px 140px;
+	background-image: url('/src/images/headerBlue.svg'),
+		url('/src/images/headerOrange.svg');
+	background-size: contain, contain;
+	background-repeat: no-repeat, no-repeat;
+	background-position: 0px 0px, 20px 0px;
+	background-color: white;
+}
+
+/* .header {
 	position: relative;
 	display: flex;
 	justify-content: space-between;
@@ -11,7 +29,8 @@
 	background-size: contain, contain;
 	background-repeat: no-repeat, no-repeat;
 	background-position: 0px 0px, 20px 0px;
-}
+	background-color: white;
+} */
 
 .navigation {
 	display: flex;

@@ -51,7 +51,7 @@ const ImageModal = ({
 				className={css.modalImage}
 			/> */}
 			{isVideo ? (
-				<video className={css.modalImage} controls autoPlay>
+				<video className={css.modalImage} controls autoPlay muted>
 					<source src={images[currentImageIndex]} type='video/mp4' />
 					Ваш браузер не поддерживает видео.
 				</video>

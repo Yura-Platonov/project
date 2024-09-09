@@ -19,13 +19,13 @@
 }
 
 .textPhone {
-	display: block;
+	display: inline-block;
 	font-size: 32px;
 	font-weight: 600;
 	line-height: 1.2;
 	margin: 0;
-	padding-left: 140px;
-	padding-top: 15px;
+	margin-left: 140px;
+	margin-top: 15px;
 	color: #fff;
 	text-shadow: 0 4px 4px #00000099;
 	text-decoration: none;
