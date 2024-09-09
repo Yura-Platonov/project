@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import TechnikaEighth from '../../components/TechnikaEighth/TechnikaEighth'
 import TechnikaFifth from '../../components/TechnikaFifth/TechnikaFifth'
 import TechnikaFirst from '../../components/TechnikaFirst/TechnikaFirst'
@@ -10,6 +10,11 @@ import TechnikaThird from '../../components/TechnikaThird/TechnikaThird'
 import TechnikaWelcome from '../../components/TechnikaWelcome/TechnikaWelcome'
 
 const Technika = () => {
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+		})
+	}, [])
 	return (
 		<>
 			<TechnikaWelcome />

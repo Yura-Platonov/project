@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { useEffect } from 'react'
 
 const Domy = () => {
-  return (
-    <div>
-      <h1>Domy Page</h1>
-      <p>Welcome to the Domy page! This is a placeholder component.</p>
-    </div>
-  );
-};
+	useEffect(() => {
+		window.scrollTo({
+			top: 0,
+		})
+	}, [])
 
-export default Domy;
+	return (
+		<div>
+			<h1>Domy Page</h1>
+			<p>Welcome to the Domy page! This is a placeholder component.</p>
+		</div>
+	)
+}
+
+export default Domy

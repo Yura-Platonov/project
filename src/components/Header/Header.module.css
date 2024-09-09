@@ -14,23 +14,15 @@
 	background-repeat: no-repeat, no-repeat;
 	background-position: 0px 0px, 20px 0px;
 	background-color: white;
-}
 
-/* .header {
-	position: relative;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	height: 90px;
-	box-sizing: border-box;
-	padding: 20px 140px;
-	background-image: url('/src/images/headerBlue.svg'),
-		url('/src/images/headerOrange.svg');
-	background-size: contain, contain;
-	background-repeat: no-repeat, no-repeat;
-	background-position: 0px 0px, 20px 0px;
-	background-color: white;
-} */
+	@media screen and (min-width: 1280px) {
+		padding: 20px 50px 20px 140px;
+	}
+
+	@media screen and (min-width: 1440px) {
+		padding: 20px 140px;
+	}
+}
 
 .navigation {
 	display: flex;
@@ -68,6 +60,16 @@
 }
 
 .borderBottomHome {
+	position: absolute;
+	/* z-index: 1; */
+	bottom: 0;
+	left: 460px;
+	right: 730px;
+	height: 12px;
+	background-color: #ffa502;
+}
+
+.borderBottomNieruchomość {
 	position: absolute;
 	/* z-index: 1; */
 	bottom: 0;

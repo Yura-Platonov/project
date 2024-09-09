@@ -6,15 +6,25 @@ import css from './Header.module.css'
 const Header = () => {
 	const location = useLocation()
 
+	const scrollToTop = () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth',
+		})
+	}
+
 	let borderBottomClass
 	switch (location.pathname) {
 		case '/':
 			borderBottomClass = css.borderBottomHome
 			break
+		case '/zabudowania':
+			borderBottomClass = css.borderBottomNieruchomość
+			break
 		case '/technika':
 			borderBottomClass = css.borderBottomTechnika
 			break
-		case '/kariera':
+		case '/praca':
 			borderBottomClass = css.borderBottomKariera
 			break
 		default:
@@ -30,13 +40,20 @@ const Header = () => {
 			</Link>
 			<nav className={css.navigation}>
 				<div className={css.navList}>
-					<NavLink to='/' className={css.navLink}>
+					<NavLink to='/' onClick={scrollToTop} className={css.navLink}>
+						Strona główna
+					</NavLink>
+					<NavLink
+						to='/zabudowania'
+						onClick={scrollToTop}
+						className={css.navLink}
+					>
 						Sprzedaż nieruchomości
 					</NavLink>
-					<NavLink to='/technika' className={css.navLink}>
+					<NavLink to='/technika' onClick={scrollToTop} className={css.navLink}>
 						Sprzęt budowlany
 					</NavLink>
-					<NavLink to='/kariera' className={css.navLink}>
+					<NavLink to='/praca' onClick={scrollToTop} className={css.navLink}>
 						Praca
 					</NavLink>
 				</div>
