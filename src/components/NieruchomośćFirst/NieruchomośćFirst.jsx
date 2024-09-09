@@ -1,0 +1,174 @@
+import { Splide, SplideSlide } from '@splidejs/react-splide'
+import '@splidejs/react-splide/css'
+import React, { useState } from 'react'
+import image1 from '../../images/House1.jpg'
+// import image2 from '../../images/technikaSection1.2.jpg'
+// import image3 from '../../images/technikaSection1.3.jpg'
+// import image4 from '../../images/technikaSection1.4.jpg'
+// import image5 from '../../images/technikaSection1.5.jpg'
+import { ReactComponent as HomeGospodarcha } from '../../images/homeGospodarcha.svg'
+import { ReactComponent as HomeInside } from '../../images/homeInside.svg'
+import { ReactComponent as HomeOutside } from '../../images/homeOutside.svg'
+import { ReactComponent as HomePlan } from '../../images/homePlan.svg'
+import ImageModal from '../ImageModal/ImageModal'
+import css from './NieruchomośćFirst.module.css'
+
+const images = [image1]
+
+const NieruchomośćFirst = () => {
+	const [isModalOpen, setIsModalOpen] = useState(false)
+	const [currentImageIndex, setCurrentImageIndex] = useState(0)
+
+	const openModal = index => {
+		setCurrentImageIndex(index)
+		setIsModalOpen(true)
+		document.body.style.overflow = 'hidden'
+	}
+
+	const closeModal = () => {
+		setIsModalOpen(false)
+		document.body.style.overflow = 'auto'
+	}
+
+	const handleNextImage = () => {
+		setCurrentImageIndex(prevIndex => (prevIndex + 1) % images.length)
+	}
+
+	const handlePrevImage = () => {
+		setCurrentImageIndex(
+			prevIndex => (prevIndex - 1 + images.length) % images.length
+		)
+	}
+
+	return (
+		<section className={css.houseSection}>
+			<h2 className={css.houseTitle}>
+				OSIEDLE POLNE – Santocko Gm. Kłodawa Województwo Lubuskie
+			</h2>
+			<div className={css.sliderContainer}>
+				<Splide
+					options={{ rewind: true, pagination: false }}
+					aria-label='React Splide'
+				>
+					{images.map((image, index) => (
+						<SplideSlide key={index}>
+							<img
+								src={image}
+								alt={`Slide ${index + 1}`}
+								className={css.splideImg}
+								onClick={() => openModal(index)}
+							/>
+						</SplideSlide>
+					))}
+				</Splide>
+			</div>
+			<div className={css.houseItemContainerSmall}>
+				<div className={css.specificationItemDivSmall}></div>
+				<ul className={css.houseSpecificationList}>
+					<li className={css.houseSpecificationItem}>
+						<p className={css.houseSpecificationText}>Powierzchnia działki</p>
+						<HomeOutside />
+						<p className={css.houseSpecificationText}>700 m2</p>
+					</li>
+					<li className={css.houseSpecificationItem}>
+						<p className={css.houseSpecificationText}>Powierzchnia użytkowa</p>
+						<HomeInside />
+						<p className={css.houseSpecificationText}>144,74 m2</p>
+					</li>
+					<li className={css.houseSpecificationItem}>
+						<p className={css.houseSpecificationText}>
+							Powierzchnia gospodarcza{' '}
+						</p>
+						<HomeGospodarcha />
+						<p className={css.houseSpecificationText}>39,18 m2</p>
+					</li>
+					<li className={css.houseSpecificationItem}>
+						<p className={css.houseSpecificationText}>Powierzchnia działki </p>
+						<HomePlan />
+						<p className={css.houseSpecificationText}>183,92 m2</p>
+					</li>
+				</ul>
+			</div>
+			<div className={css.houseItemContainer}>
+				<div className={css.specificationItemDiv}></div>
+				<div className={css.specificationContainerText}>
+					<p className={css.specificationItemTextCenter}>
+						Zapraszamy do zapoznania się z naszą ofertą dotyczącą sprzedaży
+						domów w zabudowie bliźniaczej usytuowanych w pobliżu miasta Gorzów
+						Wlkp.
+						<br />
+						<br />
+						Cechą charakterystyczną niniejszych nieruchomości jest urokliwa
+						okolica , w pobliżu której mamy piękne jezioro , stosunkowo mała
+						ilość zabudowań oraz utwardzony dojazd nową drogą asfaltową. W skład
+						kompleksu wchodzą cztery domy ( osiem lokali ) charakteryzujących
+						się nowoczesną bryłą oraz ponadprzeciętną funkcjonalnością.
+						<br />
+						<br />
+						Wychodząc naprzeciw obecnym trendom każdy lokal posiada podwójny
+						garaż znajdujący się w bryle budynku. Budynki posadowione są na
+						działkach o powierzchni 1400m2 każdy , co daje nam możliwość
+						zagospodarowania ogrodów o powierzchni ok 600m2 do każdego lokalu
+						<br />
+						<br />
+						Charakterystyka jednego lokalu:
+						<br />
+						<br />
+					</p>
+					<p className={css.specificationItemText}>
+						<span className={css.specificationItemTextAccentItalic}>Rynek</span>
+						: pierwotny;
+						<br />
+						<span className={css.specificationItemTextAccentItalic}>
+							Powierzchnia użytkowa
+						</span>{' '}
+						: 144,74 m2;
+						<br />
+						<span className={css.specificationItemTextAccentItalic}>
+							Powierzchnia gospodarcza
+						</span>
+						: 39,18 m2;
+						<br />
+						<span className={css.specificationItemTextAccentItalic}>
+							Powierzchnia całkowita
+						</span>
+						: 183,92 m2;
+						<br />
+						<span className={css.specificationItemTextAccentItalic}>
+							Powierzchnia działki
+						</span>{' '}
+						: 700 m2;
+						<br />
+						<span className={css.specificationItemTextAccentItalic}>
+							Pomieszczenia
+						</span>{' '}
+						: Salon, kuchnia , WC, Garderoba , trzy sypialnie , dwie łazienki,
+						garaż dwustanowiskowy.
+						<br /> <br />
+						Standard wykonania <br />
+						a) Surowy zamknięty; <br />
+						b) Deweloperski;
+						<br />
+						c) Pod klucz.
+						<br />
+						<br />
+						<span className={css.specificationItemTextAccent}>
+							Planowany termin przekazania obiektów: IV kwartał 2025r.
+						</span>
+					</p>
+				</div>
+			</div>
+
+			<ImageModal
+				isModalOpen={isModalOpen}
+				closeModal={closeModal}
+				currentImageIndex={currentImageIndex}
+				images={images}
+				handleNextImage={handleNextImage}
+				handlePrevImage={handlePrevImage}
+			/>
+		</section>
+	)
+}
+
+export default NieruchomośćFirst
