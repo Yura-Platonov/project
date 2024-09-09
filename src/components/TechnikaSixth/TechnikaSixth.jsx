@@ -1,6 +1,6 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
-import React, { useRef, useState } from 'react'
+import React, { useState } from 'react'
 import video1 from '../../images/technikaSection6.0.mp4'
 import image1 from '../../images/technikaSection6.1.jpg'
 import image2 from '../../images/technikaSection6.2.jpg'
@@ -13,26 +13,17 @@ const images = [video1, image1, image2, image3]
 const TechnikaSixth = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
-	const videoRef = useRef(null)
 
 	const openModal = (index, event) => {
-		event.preventDefault() // предотвращаем стандартное поведение
+		event.preventDefault()
 		setCurrentImageIndex(index)
 		setIsModalOpen(true)
 		document.body.style.overflow = 'hidden'
-
-		if (index === 0 && videoRef.current) {
-			videoRef.current.pause() // ставим видео на паузу
-		}
 	}
 
 	const closeModal = () => {
 		setIsModalOpen(false)
 		document.body.style.overflow = 'auto'
-
-		// if (currentImageIndex === 0 && videoRef.current) {
-		// 	videoRef.current.play()
-		// }
 	}
 
 	const handleNextImage = () => {
@@ -59,9 +50,11 @@ const TechnikaSixth = () => {
 						<SplideSlide key={index}>
 							{index === 0 ? (
 								<video
-									ref={videoRef}
 									className={css.splideImg}
-									controls
+									// controls
+									autoPlay
+									muted
+									loop
 									onClick={e => openModal(index, e)}
 								>
 									<source src={media} type='video/mp4' />
