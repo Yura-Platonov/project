@@ -36,7 +36,7 @@ const Header = () => {
 			<div className={borderBottomClass}></div>
 			<div className={css.borderBottom}></div>
 			<Link to='/'>
-				<Logo />
+				<Logo className={css.logo} />
 			</Link>
 			<nav className={css.navigation}>
 				<div className={css.navList}>

@@ -15,6 +15,12 @@
 	background-position: 0px 0px, 20px 0px;
 	background-color: white;
 
+	@media screen and (max-width: 768px) {
+		padding: 5px 30px;
+		height: 40px;
+		background-position: 0px 0px, 10px 0px;
+	}
+
 	@media screen and (min-width: 1280px) {
 		padding: 20px 50px 20px 140px;
 	}
@@ -27,6 +33,25 @@
 .navigation {
 	display: flex;
 	height: 100%;
+
+	@media screen and (max-width: 768px) {
+		display: none;
+	}
+
+	@media screen and (min-width: 1280px) {
+		display: flex;
+	}
+
+	@media screen and (min-width: 1440px) {
+		display: flex;
+	}
+}
+
+.logo {
+	@media screen and (max-width: 768px) {
+		width: 70px;
+		height: 30px;
+	}
 }
 
 .navList {

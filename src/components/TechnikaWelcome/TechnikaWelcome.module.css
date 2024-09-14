@@ -5,6 +5,11 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+
+	@media screen and (max-width: 768px) {
+		height: 180px;
+		background-image: url('../../images/bgTechnikaMob.jpg');
+	}
 }
 
 .title {
@@ -14,6 +19,15 @@
 	line-height: 1.2;
 	padding: 30px 0 0 140px;
 	text-shadow: 0 4px 4px #00000099;
+	@media screen and (max-width: 768px) {
+		font-size: 18px;
+		padding: 0;
+		padding-top: 10px;
+		margin-left: auto;
+		margin-right: auto;
+		width: 180px;
+		text-align: center;
+	}
 }
 
 .text {
@@ -24,6 +38,13 @@
 	margin-top: 400px;
 	color: #fff;
 	text-shadow: 0 4px 4px #00000099;
+	@media screen and (max-width: 768px) {
+		font-size: 16px;
+		margin: 0;
+		padding-top: 70px;
+		margin-left: auto;
+		margin-right: auto;
+	}
 }
 
 .textPhone {
@@ -41,5 +62,8 @@
 	&:focus {
 		/* text-decoration: underline; */
 		color: #ffa502;
+	}
+	@media screen and (max-width: 768px) {
+		font-size: 16px;
 	}
 }
