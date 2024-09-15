@@ -201,7 +201,11 @@ export const KarieraVacancy = () => {
 			</ul>
 			<div className={css.containerWorkGermany}>
 				<div className={css.karieraItemDiv}>
-					<h3 className={css.karieraSubTitle}>Робота в Німеччині!</h3>
+					<h3
+						className={`${css.karieraSubTitle} ${css.karieraSubTitlePrimary}`}
+					>
+						Робота в Німеччині!
+					</h3>
 				</div>
 				<div className={css.containerFlex}>
 					<div className={css.containerFlexItem}>

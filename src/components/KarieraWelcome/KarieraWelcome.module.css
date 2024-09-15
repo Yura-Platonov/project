@@ -5,6 +5,10 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
+	@media screen and (max-width: 768px) {
+		height: 160px;
+		background-image: url('../../images/bgKarieraMob.jpg');
+	}
 }
 
 .text {
@@ -16,6 +20,12 @@
 	padding-left: 140px;
 	color: #fff;
 	text-shadow: 0 4px 4px #00000099;
+
+	@media screen and (max-width: 768px) {
+		font-size: 16px;
+		padding-top: 70px;
+		padding-left: 20px;
+	}
 }
 
 .textPhone {
@@ -33,5 +43,10 @@
 	&:focus {
 		/* text-decoration: underline; */
 		color: #ffa502;
+	}
+	@media screen and (max-width: 768px) {
+		font-size: 16px;
+		margin-left: 20px;
+		margin-top: 5px;
 	}
 }
