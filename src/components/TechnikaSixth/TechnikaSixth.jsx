@@ -38,7 +38,7 @@ const TechnikaSixth = () => {
 
 	return (
 		<section className={css.technikaSection}>
-			<h2 className={css.technikaTitle}>
+			<h2 className={`${css.technikaTitle} ${css.technikaTitleSolo}`}>
 				MERCEDES ACTROS SAMOCHOD CIEZAROWE Z HDS
 			</h2>
 			<div className={css.sliderContainer}>

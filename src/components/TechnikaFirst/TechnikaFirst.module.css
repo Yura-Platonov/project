@@ -95,6 +95,12 @@
 	}
 }
 
+.technikaTitleSolo {
+	@media screen and (max-width: 768px) {
+		padding: 0;
+	}
+}
+
 .technikaList {
 	position: absolute;
 	top: 700px;
@@ -134,6 +140,7 @@
 	width: 450px;
 	height: 400px;
 	@media screen and (max-width: 768px) {
+		width: 320px;
 		height: auto;
 	}
 }
@@ -143,6 +150,7 @@
 	height: 450px;
 	@media screen and (max-width: 768px) {
 		height: auto;
+		width: 320px;
 	}
 }
 
@@ -173,14 +181,23 @@
 
 .technikaItemContainerSolo {
 	margin-top: 300px;
+	@media screen and (max-width: 768px) {
+		margin-top: 20px;
+	}
 }
 
 .technikaItemContainerThird {
 	margin-top: 500px;
+	@media screen and (max-width: 768px) {
+		margin-top: 20px;
+	}
 }
 
 .technikaItemContainerEighth {
 	margin-top: 350px;
+	@media screen and (max-width: 768px) {
+		margin-top: 20px;
+	}
 }
 
 .technikaSubTitle {
@@ -196,6 +213,10 @@
 	line-height: 1.2;
 	background: #00304a;
 	color: #ffffff;
+	@media screen and (max-width: 768px) {
+		height: 70px;
+		font-size: 18px;
+	}
 }
 
 .specificationList {
@@ -231,6 +252,9 @@
 	text-align: center;
 	padding: 20px;
 	margin: 0;
+	@media screen and (max-width: 768px) {
+		font-size: 16px;
+	}
 }
 
 .specificationItemTextAccent {
@@ -246,4 +270,7 @@
 	margin: 0;
 	background: #00304a;
 	color: #ffffff;
+	@media screen and (max-width: 768px) {
+		height: 50px;
+	}
 }

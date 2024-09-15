@@ -36,7 +36,7 @@ const TechnikaSeventh = () => {
 
 	return (
 		<section className={css.technikaSection}>
-			<h2 className={css.technikaTitle}>
+			<h2 className={`${css.technikaTitle} ${css.technikaTitleSolo}`}>
 				Zagęszczarka rewersyjna Ammann APH 5020 DE
 			</h2>
 			<div className={css.sliderContainer}>
