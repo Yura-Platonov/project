@@ -22,10 +22,14 @@
 	flex-direction: column;
 	gap: 30px;
 }
+
 .containerColumnSecond {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
+	@media screen and (max-width: 768px) {
+		align-items: center;
+	}
 }
 
 .navList {
@@ -119,4 +123,14 @@
 
 .socialMediaLink {
 	cursor: pointer;
+}
+
+.byUsText {
+	font-size: 16px;
+	color: #fff;
+}
+
+.byUsLink {
+	color: #fff;
+	text-decoration: underline;
 }

@@ -67,4 +67,13 @@ code {
 	background: #ffa502;
 	padding: 10px 20px;
 	align-items: start;
+
+	@media screen and (max-width: 768px) {
+		color: white !important;
+		width: 320px;
+		padding: 5px 5px 5px 25px;
+		text-align: center;
+		border-radius: 0 10px 10px 0;
+		font-weight: 500;
+	}
 }

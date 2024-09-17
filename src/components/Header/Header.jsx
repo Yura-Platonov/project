@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
+import { ReactComponent as IconMenuClose } from '../../images/IconMenuClose.svg'
+import { ReactComponent as IconMenuOpen } from '../../images/IconMenuOpen.svg'
 import { ReactComponent as Logo } from '../../images/Logo.svg'
 import css from './Header.module.css'
 
 const Header = () => {
+	const [menuOpen, setMenuOpen] = useState(false)
 	const location = useLocation()
+
+	const toggleMenu = () => {
+		setMenuOpen(prevState => !prevState)
+	}
 
 	const scrollToTop = () => {
 		window.scrollTo({
@@ -29,6 +36,24 @@ const Header = () => {
 			break
 		default:
 			borderBottomClass = css.borderBottomDefault
+	}
+
+	let borderLeftClass
+	switch (location.pathname) {
+		case '/':
+			borderLeftClass = css.borderLeftHome
+			break
+		case '/zabudowania':
+			borderLeftClass = css.borderLeftNieruchomość
+			break
+		case '/technika':
+			borderLeftClass = css.borderLeftTechnika
+			break
+		case '/praca':
+			borderLeftClass = css.borderLeftKariera
+			break
+		default:
+			borderLeftClass = css.borderLeftHome
 	}
 
 	return (
@@ -58,6 +83,52 @@ const Header = () => {
 					</NavLink>
 				</div>
 			</nav>
+			<button onClick={toggleMenu} className={css.menuButton}>
+				{menuOpen ? <IconMenuClose /> : <IconMenuOpen />}
+			</button>
+			{menuOpen && (
+				<div className={css.mobileMenu}>
+					<div className={borderLeftClass}></div>
+					<ul className={css.mobileNavList}>
+						<li className={css.mobileNavItem}>
+							<NavLink
+								to='/'
+								onClick={scrollToTop}
+								className={css.mobileNavLink}
+							>
+								Strona główna
+							</NavLink>
+						</li>
+						<li className={css.mobileNavItem}>
+							<NavLink
+								to='/zabudowania'
+								onClick={scrollToTop}
+								className={css.mobileNavLink}
+							>
+								Sprzedaż nieruchomości
+							</NavLink>
+						</li>
+						<li className={css.mobileNavItem}>
+							<NavLink
+								to='/technika'
+								onClick={scrollToTop}
+								className={css.mobileNavLink}
+							>
+								Sprzęt budowlany
+							</NavLink>
+						</li>
+						<li className={css.mobileNavItem}>
+							<NavLink
+								to='/praca'
+								onClick={scrollToTop}
+								className={css.mobileNavLink}
+							>
+								Praca
+							</NavLink>
+						</li>
+					</ul>
+				</div>
+			)}
 		</header>
 	)
 }

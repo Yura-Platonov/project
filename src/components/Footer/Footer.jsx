@@ -67,7 +67,7 @@ const Footer = () => {
 			</a>
 			<div className={css.containerColumnSecond}>
 				<Link to='/'>
-					<Logo className={css.logo} />
+					<Logo />
 				</Link>
 				<div className={css.socialMediaContainer}>
 					<a
@@ -80,6 +80,17 @@ const Footer = () => {
 					</a>
 					<Gmail />
 				</div>
+				<p className={css.byUsText}>
+					Created by {''}
+					<a
+						href='https://denborgin.com/'
+						target='_blank'
+						rel='noopener noreferrer'
+						className={css.byUsLink}
+					>
+						DENBORGIN
+					</a>
+				</p>
 			</div>
 		</footer>
 	)
