@@ -1,0 +1,12 @@
+.welcomeSection {
+	height: 800px;
+	background-image: url('../../images/TechnikaWelcomeBg.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	@media screen and (max-width: 768px) {
+		height: 180px;
+		background-image: url('../../images/bgTechnikaMob.jpg');
+	}
+}

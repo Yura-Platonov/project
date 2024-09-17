@@ -93,7 +93,10 @@ const Header = () => {
 						<li className={css.mobileNavItem}>
 							<NavLink
 								to='/'
-								onClick={scrollToTop}
+								onClick={() => {
+									scrollToTop()
+									setMenuOpen(false)
+								}}
 								className={css.mobileNavLink}
 							>
 								Strona główna
@@ -102,7 +105,10 @@ const Header = () => {
 						<li className={css.mobileNavItem}>
 							<NavLink
 								to='/zabudowania'
-								onClick={scrollToTop}
+								onClick={() => {
+									scrollToTop()
+									setMenuOpen(false)
+								}}
 								className={css.mobileNavLink}
 							>
 								Sprzedaż nieruchomości
@@ -111,7 +117,10 @@ const Header = () => {
 						<li className={css.mobileNavItem}>
 							<NavLink
 								to='/technika'
-								onClick={scrollToTop}
+								onClick={() => {
+									scrollToTop()
+									setMenuOpen(false)
+								}}
 								className={css.mobileNavLink}
 							>
 								Sprzęt budowlany
@@ -120,7 +129,10 @@ const Header = () => {
 						<li className={css.mobileNavItem}>
 							<NavLink
 								to='/praca'
-								onClick={scrollToTop}
+								onClick={() => {
+									scrollToTop()
+									setMenuOpen(false)
+								}}
 								className={css.mobileNavLink}
 							>
 								Praca

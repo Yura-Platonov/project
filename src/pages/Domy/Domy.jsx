@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import DomyWelcome from '../../components/DomyWelcome/DomyWelcome'
 
 const Domy = () => {
 	useEffect(() => {
@@ -7,12 +8,7 @@ const Domy = () => {
 		})
 	}, [])
 
-	return (
-		<div>
-			<h1>Domy Page</h1>
-			<p>Welcome to the Domy page! This is a placeholder component.</p>
-		</div>
-	)
+	return <DomyWelcome />
 }
 
 export default Domy
