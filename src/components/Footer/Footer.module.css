@@ -1,0 +1,110 @@
+.footer {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 200px;
+	box-sizing: border-box;
+	padding: 20px 140px;
+	border-top: 20px solid #ffa502;
+
+	background-color: #00304a;
+
+	/* @media screen and (max-width: 768px) {
+		padding: 5px 30px;
+		height: 40px;
+	}
+
+	@media screen and (min-width: 1280px) {
+		padding: 20px 50px 20px 140px;
+	}
+
+	@media screen and (min-width: 1440px) {
+		padding: 20px 140px;
+	} */
+}
+
+.containerColumn {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+.containerColumnSecond {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.navList {
+	display: flex;
+	gap: 50px;
+	height: 55px;
+}
+
+.navItem {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	width: fit-content;
+}
+
+.logo {
+	@media screen and (max-width: 768px) {
+		width: 70px;
+		height: 30px;
+	}
+}
+
+.navLink {
+	color: #fff;
+	text-decoration: none;
+	font-weight: 400;
+	width: fit-content;
+}
+
+.navLink:hover {
+	cursor: pointer;
+	color: #ffa502;
+}
+
+.contactInfoContainer {
+	height: auto;
+}
+
+.contactInfo {
+	color: #fff;
+	display: inline-block;
+}
+
+.contactInfo:hover {
+	cursor: pointer;
+	color: #ffa502;
+	text-decoration: underline;
+}
+
+.contactInfo:first-child {
+	margin-right: 20px;
+}
+
+.contactInfo:last-child {
+	margin-top: 10px;
+}
+
+.address {
+	position: absolute;
+	top: 80%;
+	left: 50%;
+	transform: translateX(-50%);
+	color: #fff;
+	text-decoration: underline;
+}
+
+.socialMediaContainer {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.socialMediaLink {
+	cursor: pointer;
+}

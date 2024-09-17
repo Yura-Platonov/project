@@ -1,6 +1,7 @@
 import React from 'react'
 import Modal from 'react-modal'
 import { Route, Routes } from 'react-router-dom'
+import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Domy from './pages/Domy/Domy'
 import Kariera from './pages/Kariera/Kariera'
@@ -19,6 +20,7 @@ export const App = () => {
 				<Route path='/praca' element={<Kariera />} />
 				<Route path='/technika' element={<Technika />} />
 			</Routes>
+			<Footer />
 		</div>
 	)
 }
