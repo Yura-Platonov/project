@@ -10,18 +10,11 @@
 
 	background-color: #00304a;
 
-	/* @media screen and (max-width: 768px) {
-		padding: 5px 30px;
-		height: 40px;
+	@media screen and (max-width: 768px) {
+		flex-direction: column;
+		padding: 20px;
+		height: auto;
 	}
-
-	@media screen and (min-width: 1280px) {
-		padding: 20px 50px 20px 140px;
-	}
-
-	@media screen and (min-width: 1440px) {
-		padding: 20px 140px;
-	} */
 }
 
 .containerColumn {
@@ -37,8 +30,13 @@
 
 .navList {
 	display: flex;
-	gap: 50px;
 	height: 55px;
+	gap: 50px;
+
+	@media screen and (max-width: 768px) {
+		gap: 30px;
+		height: auto;
+	}
 }
 
 .navItem {
@@ -48,18 +46,15 @@
 	width: fit-content;
 }
 
-.logo {
-	@media screen and (max-width: 768px) {
-		width: 70px;
-		height: 30px;
-	}
-}
-
 .navLink {
 	color: #fff;
 	text-decoration: none;
 	font-weight: 400;
 	width: fit-content;
+
+	@media screen and (max-width: 768px) {
+		font-size: 16px;
+	}
 }
 
 .navLink:hover {
@@ -69,11 +64,17 @@
 
 .contactInfoContainer {
 	height: auto;
+	@media screen and (max-width: 768px) {
+		text-align: center;
+	}
 }
 
 .contactInfo {
 	color: #fff;
 	display: inline-block;
+	@media screen and (max-width: 768px) {
+		font-size: 16px;
+	}
 }
 
 .contactInfo:hover {
@@ -97,12 +98,23 @@
 	transform: translateX(-50%);
 	color: #fff;
 	text-decoration: underline;
+	@media screen and (max-width: 768px) {
+		position: static;
+		text-align: center;
+		font-size: 15px;
+		transform: translateX(0);
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
 }
 
 .socialMediaContainer {
 	display: flex;
 	align-items: center;
 	gap: 20px;
+	@media screen and (max-width: 768px) {
+		justify-content: center;
+	}
 }
 
 .socialMediaLink {

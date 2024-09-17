@@ -15,13 +15,10 @@ const Footer = () => {
 
 	return (
 		<footer className={css.footer}>
-			{/* <Link to='/'>
-				<Logo className={css.logo} />
-			</Link> */}
 			<div className={css.containerColumn}>
 				<nav className={css.navigation}>
-					<div className={css.navList}>
-						<div className={css.navItem}>
+					<ul className={css.navList}>
+						<li className={css.navItem}>
 							<Link to='/' onClick={scrollToTop} className={css.navLink}>
 								Strona główna
 							</Link>
@@ -32,8 +29,8 @@ const Footer = () => {
 							>
 								Sprzedaż nieruchomości
 							</Link>
-						</div>
-						<div className={css.navItem}>
+						</li>
+						<li className={css.navItem}>
 							<Link
 								to='/technika'
 								onClick={scrollToTop}
@@ -44,8 +41,8 @@ const Footer = () => {
 							<Link to='/praca' onClick={scrollToTop} className={css.navLink}>
 								Praca
 							</Link>
-						</div>
-					</div>
+						</li>
+					</ul>
 				</nav>
 				<div className={css.contactInfoContainer}>
 					<a href='tel:+48605055346' className={css.contactInfo}>
