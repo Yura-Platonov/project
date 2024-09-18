@@ -16,10 +16,13 @@ const DomyMain = () => {
 						<img src={DomyHouse} alt='house' />
 						<div className={css.textContainer}>
 							<p className={css.textCenter}>
-								Firma Havrysh3 Sp. z o.o. na chwilę obecną zrealizowała lub jest
-								w trakcie realizacji inwestycji własnych o charakterze
-								budownictwa mieszkalnego(budynek jednorodzinny wolnostojący;
-								budynek mieszkalno-usługowy; budynki jednorodzinne dwulokalowe)
+								<span className={css.textAccent}>
+									Firma Havrysh3 Sp. z o.o.
+								</span>{' '}
+								na chwilę obecną zrealizowała lub jest w trakcie realizacji
+								inwestycji własnych o charakterze budownictwa
+								mieszkalnego(budynek jednorodzinny wolnostojący; budynek
+								mieszkalno-usługowy; budynki jednorodzinne dwulokalowe)
 								indywidualnego na terenie województwa Lubuskiego oraz
 								Zachodniopomorskiego.
 							</p>
@@ -113,39 +116,23 @@ const DomyMain = () => {
 					</div>
 				</li>
 			</ul>
-			{/* <div className={css.technikaItemContainer}>
-				<div className={css.specificationItemDiv}></div>
+			<div className={css.technikaItemContainer}>
+				<div className={css.specificationItemDiv}>O NAS</div>
 				<p className={css.specificationItemText}>
-					<span className={css.specificationItemTextAccent}>
-						JCB 3CX Koparko-Ładowarka z 2015 roku
-					</span>{' '}
-					- to wielofunkcyjna maszyna budowlana, która łączy w sobie funkcje
-					koparki i ładowarki. Idealnie nadaje się do szerokiego zakresu prac na
-					placach budowy, w tym kopania, wykonywania rowów, załadunku
-					materiałów, podnoszenia ładunków oraz ogólnego przemieszczania ziemi.
+					,,Rzetelna firma w nowej rzeczywistości ‘’ – to nasze hasło przewodnie
+					. Założona w 2018r. firma na dzień dzisiejszy realizuje samodzielnie w
+					branży budowlanej kompleksowe inwestycje mieszkaniowe w
+					północno-zachodniej Polsce oraz na terenie Niemiec.
 					<br />
 					<br />
-					Ten model ma kompaktowe rozmiary i wysoką zwrotność, co pozwala na
-					efektywną pracę w ograniczonej przestrzeni, np. w warunkach miejskich
-					lub na małych placach budowy.
-					<br />
-					<br />
-					Model z 2015 roku charakteryzuje się wysoką niezawodnością i
-					wydajnością. Wyposażony jest w nowoczesne systemy sterowania, które
-					zapewniają precyzję i kontrolę podczas pracy, co jest istotne dla
-					osiągnięcia wysokich wyników na budowie. JCB słynie z łatwości w
-					utrzymaniu, co zmniejsza koszty napraw i minimalizuje przestoje
-					maszyn.
-					<br />
-					<br />
-					To idealne rozwiązanie dla tych, którzy cenią efektywność,
-					niezawodność i wygodę w użytkowaniu.
-					<br />
-					<br />
-					Także oferujemy wybór łyżek do tego modelu maszyny : 150cm, 90cm,
-					60cm, 30cm;
+					Świadczymy usługi wykonawstwa stanów surowych, robót wykończeniowych
+					oraz usługi sprzętowe .Profesjonalna kadra gwarantuje terminowe
+					realizacja na najwyższym poziomie. Stała współpraca z największym
+					deweloperem w regionie umożliwia nam rozwój oraz podnoszenie
+					umiejętności technicznych i organizacyjnych. Jesteśmy otwarci na nowe
+					wyzwania . Zapraszamy do współpracy.
 				</p>
-			</div> */}
+			</div>
 		</section>
 	)
 }
