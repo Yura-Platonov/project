@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import DomyMain from '../../components/DomyMain/DomyMain'
 import DomyWelcome from '../../components/DomyWelcome/DomyWelcome'
 
 const Domy = () => {
@@ -8,7 +9,12 @@ const Domy = () => {
 		})
 	}, [])
 
-	return <DomyWelcome />
+	return (
+		<>
+			<DomyWelcome />
+			<DomyMain />
+		</>
+	)
 }
 
 export default Domy
