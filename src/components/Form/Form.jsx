@@ -71,7 +71,13 @@ const ContactForm = () => {
 									<label className={css.labelTitle} htmlFor='name'>
 										Imię i nazwisko*
 									</label>
-									<Field className={css.formInput} type='text' name='name' />
+									<Field
+										className={css.formInput}
+										id='name'
+										type='text'
+										name='name'
+										autoComplete='off'
+									/>
 									<ErrorMessage
 										className={css.errorMsg}
 										name='name'
@@ -83,7 +89,13 @@ const ContactForm = () => {
 									<label className={css.labelTitle} htmlFor='email'>
 										Adres e-mail*
 									</label>
-									<Field className={css.formInput} type='email' name='email' />
+									<Field
+										className={css.formInput}
+										id='email'
+										type='email'
+										name='email'
+										autoComplete='on'
+									/>
 									<ErrorMessage
 										className={css.errorMsg}
 										name='email'
@@ -95,12 +107,12 @@ const ContactForm = () => {
 									<label className={css.labelTitle} htmlFor='subject'>
 										Numer telefonu
 									</label>
-									<Field className={css.formInput} type='text' name='subject' />
-									{/* <ErrorMessage
-										className={css.errorMsg}
-										name='phoneNumber'
-										component='div'
-									/> */}
+									<Field
+										className={css.formInput}
+										type='text'
+										name='subject'
+										id='subject'
+									/>
 								</div>
 							</div>
 
@@ -111,6 +123,7 @@ const ContactForm = () => {
 								<Field
 									className={css.formTextarea}
 									as='textarea'
+									id='message'
 									name='message'
 								/>
 								<ErrorMessage

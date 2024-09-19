@@ -1,5 +1,7 @@
 import React from 'react'
 import css from './MapWithContactInfo.module.css'
+import { ReactComponent as Facebook } from '../../images/facebookFooter.svg'
+import { ReactComponent as Gmail } from '../../images/gmailFooter.svg'
 
 const MapWithContactInfo = () => {
 	return (
@@ -15,29 +17,9 @@ const MapWithContactInfo = () => {
 			>
 				<a href='https://www.gps.ie/'>gps vehicle tracker</a>
 			</iframe>
-			<div className={css.contactInfo}>
+			<div>
 				<h2 className={css.contactTitle}>Dane kontaktowe</h2>
 				<h3 className={css.contactSubTitle}>HAVRYSH 3 Sp. z o.o.</h3>
-				{/* <ul className={css.listAdress}>
-					<li className={css.itemAdress}>
-						<strong>Adres:</strong>
-						<p className={css.textLong}>
-							ul. Franciszka Walczaka 114 66 - 400 Gorzów Wielkopolski
-						</p>
-					</li>
-					<li className={css.itemAdress}>
-						<strong>REGON:</strong>
-						<p>369364012</p>
-					</li>
-					<li className={css.itemAdress}>
-						<strong>NIP:</strong>
-						<p>5993215322</p>
-					</li>
-					<li className={css.itemAdress}>
-						<strong>KRS:</strong>
-						<p>0000715989</p>
-					</li>
-				</ul> */}
 				<div className={css.flexContainer}>
 					<ul className={css.listTitle}>
 						<li className={css.bold}>Adres:</li>
@@ -54,6 +36,28 @@ const MapWithContactInfo = () => {
 						<li className={css.text}>5993215322</li>
 						<li className={css.text}>0000715989</li>
 					</ul>
+				</div>
+				<div className={css.contactInfoContainer}>
+					<a href='tel:+48605055346' className={css.contactInfo}>
+						+48 605 055 346
+					</a>
+					<a href='tel:+48570351830' className={css.contactInfo}>
+						+48 570 351 830
+					</a>
+					<a href='mailto:havrysh4@gmail.com' className={css.contactInfo}>
+						havrysh4@gmail.com
+					</a>
+				</div>
+				<div className={css.socialMediaContainer}>
+					<a
+						href='https://www.facebook.com/profile.php?id=61550639923473'
+						target='_blank'
+						rel='noopener noreferrer'
+						className={css.socialMediaLink}
+					>
+						<Facebook className={css.socialMediaSvg} />
+					</a>
+					<Gmail className={css.socialMediaSvg} />
 				</div>
 			</div>
 		</div>
