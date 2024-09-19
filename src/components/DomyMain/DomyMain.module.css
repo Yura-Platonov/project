@@ -1,5 +1,8 @@
 .mainSection {
 	padding-bottom: 50px;
+	max-width: 1440px;
+	margin-left: auto;
+	margin-right: auto;
 
 	@media screen and (max-width: 768px) {
 		padding-bottom: 30px;
@@ -14,15 +17,32 @@
 	gap: 50px;
 }
 
+.mainItem {
+	position: relative;
+	background-image: url('/src/images/DomyBgImg.svg');
+	background-repeat: no-repeat;
+}
+
+.mainItem::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -560px;
+	width: 560px;
+	height: 90px;
+	background: #00304a;
+	z-index: -1;
+}
+
 .continerFlex {
 	display: flex;
 	gap: 100px;
 	margin-left: 140px;
-	margin-right: 140px;
+	/* margin-right: 140px; */
 }
 
 .textContainer {
-	max-width: 1200px;
+	max-width: 800px;
 	text-align: right;
 }
 
@@ -96,11 +116,6 @@
 	font-size: 36px;
 	font-weight: 500;
 	color: #fff;
-}
-
-.mainItem {
-	background-image: url('/src/images/DomyBgImg.svg');
-	background-repeat: no-repeat;
 }
 
 .technikaItemContainer {
