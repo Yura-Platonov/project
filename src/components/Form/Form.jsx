@@ -1,84 +1,169 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik'
 import React from 'react'
 import * as Yup from 'yup'
+import css from './Form.module.css'
 
 const ContactForm = () => {
 	const validationSchema = Yup.object().shape({
-		fullName: Yup.string().required('Pole nie może być puste.'),
+		name: Yup.string().required('Pole nie może być puste.'),
 		email: Yup.string()
 			.email('Proszę wprowadzić poprawny adres e-mail.')
 			.required('Pole nie może być puste.'),
-		phoneNumber: Yup.string().optional(),
-		textarea: Yup.string().required('Pole nie może być puste.'),
-		checkbox1: Yup.boolean().oneOf([true], 'Это обязательное поле'),
-		checkbox2: Yup.boolean().oneOf([true], 'Это обязательное поле'),
+		subject: Yup.string().optional(),
+		message: Yup.string().required('Pole nie może być puste.'),
+		checkbox1: Yup.boolean().oneOf([true]),
+		checkbox2: Yup.boolean().oneOf([true]),
 	})
+
+	const handleSubmit = async (values, { setSubmitting }) => {
+		try {
+			const response = await fetch('https://havrysh.eu/mail/contact-form/', {
+				method: 'POST',
+				headers: {
+					accept: 'application/json',
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					name: values.name,
+					email: values.email,
+					subject: values.subject,
+					message: values.message,
+				}),
+			})
+			const data = await response.json()
+
+			if (response.ok) {
+				alert('Email sent!')
+				console.log('Succesfull')
+			} else {
+				alert(`Error: ${data.message || 'Something went wrong.'}`)
+			}
+		} catch (error) {
+			alert('An unexpected error occurred.')
+		} finally {
+			setSubmitting(false)
+		}
+	}
 
 	return (
 		<Formik
 			initialValues={{
-				fullName: '',
+				name: '',
 				email: '',
-				phoneNumber: '',
-				textarea: '',
+				subject: '',
+				message: '',
 				checkbox1: false,
 				checkbox2: false,
 			}}
 			validationSchema={validationSchema}
-			onSubmit={values => {
-				console.log('Form data', values)
-			}}
+			onSubmit={handleSubmit}
 		>
-			{({ isSubmitting }) => (
-				<Form>
-					<h2>Kontakt</h2>
-					<div>
-						<label htmlFor='fullName'>Imię i nazwisko*</label>
-						<Field type='text' name='fullName' />
-						<ErrorMessage name='fullName' component='div' />
-					</div>
+			{({ isSubmitting, errors, touched }) => (
+				<Form className={css.formContainer}>
+					<h2 className={css.title}>
+						Cześć! <br /> Masz pytanie?
+						<br /> W takim razie zapraszamy do kontaktu z nami !
+					</h2>
+					<div className={css.insideContainer}>
+						<div className={css.flexContainer}>
+							<div className={css.firstSection}>
+								<div className={css.labelContainer}>
+									<label className={css.labelTitle} htmlFor='name'>
+										Imię i nazwisko*
+									</label>
+									<Field className={css.formInput} type='text' name='name' />
+									<ErrorMessage
+										className={css.errorMsg}
+										name='name'
+										component='div'
+									/>
+								</div>
 
-					<div>
-						<label htmlFor='email'>Adres e-mail*</label>
-						<Field type='email' name='email' />
-						<ErrorMessage name='email' component='div' />
-					</div>
+								<div className={css.labelContainer}>
+									<label className={css.labelTitle} htmlFor='email'>
+										Adres e-mail*
+									</label>
+									<Field className={css.formInput} type='email' name='email' />
+									<ErrorMessage
+										className={css.errorMsg}
+										name='email'
+										component='div'
+									/>
+								</div>
 
-					<div>
-						<label htmlFor='phoneNumber'>Numer telefonu</label>
-						<Field type='text' name='phoneNumber' />
-						<ErrorMessage name='phoneNumber' component='div' />
-					</div>
+								<div className={css.labelContainer}>
+									<label className={css.labelTitle} htmlFor='subject'>
+										Numer telefonu
+									</label>
+									<Field className={css.formInput} type='text' name='subject' />
+									{/* <ErrorMessage
+										className={css.errorMsg}
+										name='phoneNumber'
+										component='div'
+									/> */}
+								</div>
+							</div>
 
-					<div>
-						<label htmlFor='textarea'>Wiadomość*</label>
-						<Field as='textarea' name='textarea' />
-						<ErrorMessage name='textarea' component='div' />
-					</div>
-
-					<div>
-						<label>
-							<Field type='checkbox' name='checkbox1' />
-							Wyrażam zgodę na kontakt telefoniczny (również MMS, SMS) w celu
-							otrzymywania informacji  m.in. o oferowanych usługach, nowych
-							możliwościach ofertowych i promocyjnych.{' '}
+							<div className={css.secondSection}>
+								<label className={css.labelTitle} htmlFor='message'>
+									Wiadomość*
+								</label>
+								<Field
+									className={css.formTextarea}
+									as='textarea'
+									name='message'
+								/>
+								<ErrorMessage
+									className={css.errorMsg}
+									name='message'
+									component='div'
+								/>
+							</div>
+						</div>
+						<label className={css.checkbox}>
+							<Field
+								className={css.customCheckboxInput}
+								type='checkbox'
+								name='checkbox1'
+							/>
+							<span className={css.customCheckbox}></span>
+							<p
+								className={`${css.text} ${
+									errors.checkbox1 && touched.checkbox1 ? css.errorText : ''
+								}`}
+							>
+								Wyrażam zgodę na kontakt telefoniczny (również MMS, SMS) w celu
+								otrzymywania informacji  m.in. o oferowanych usługach, nowych
+								możliwościach ofertowych i promocyjnych.
+							</p>
 						</label>
-						<ErrorMessage name='checkbox1' component='div' />
-					</div>
 
-					<div>
-						<label>
-							<Field type='checkbox' name='checkbox2' />
-							Wyrażam zgodę na kontakt elektroniczny (email) w celu otrzymywania
-							informacji o  m.in. o oferowanych usługach, nowych możliwościach
-							ofertowych i promocyjnych.{' '}
+						<label className={css.checkbox}>
+							<Field
+								className={css.customCheckboxInput}
+								type='checkbox'
+								name='checkbox2'
+							/>
+							<span className={css.customCheckbox}></span>
+							<p
+								className={`${css.text} ${
+									errors.checkbox2 && touched.checkbox2 ? css.errorText : ''
+								}`}
+							>
+								Wyrażam zgodę na kontakt elektroniczny (email) w celu
+								otrzymywania informacji o  m.in. o oferowanych usługach, nowych
+								możliwościach ofertowych i promocyjnych.
+							</p>
 						</label>
-						<ErrorMessage name='checkbox2' component='div' />
-					</div>
 
-					<button type='submit' disabled={isSubmitting}>
-						Wyślij
-					</button>
+						<button
+							className={css.submitButtom}
+							type='submit'
+							disabled={isSubmitting}
+						>
+							Wyślij
+						</button>
+					</div>
 				</Form>
 			)}
 		</Formik>
