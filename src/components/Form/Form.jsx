@@ -15,7 +15,7 @@ const ContactForm = () => {
 		checkbox2: Yup.boolean().oneOf([true]),
 	})
 
-	const handleSubmit = async (values, { setSubmitting }) => {
+	const handleSubmit = async (values, { setSubmitting, resetForm }) => {
 		try {
 			const response = await fetch('https://havrysh.eu/mail/contact-form/', {
 				method: 'POST',
@@ -34,6 +34,7 @@ const ContactForm = () => {
 
 			if (response.ok) {
 				alert('Email sent!')
+				resetForm()
 				console.log('Succesfull')
 			} else {
 				alert(`Error: ${data.message || 'Something went wrong.'}`)
