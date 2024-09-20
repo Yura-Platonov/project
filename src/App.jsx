@@ -3,6 +3,7 @@ import Modal from 'react-modal'
 import { Route, Routes } from 'react-router-dom'
 import css from './App.module.css'
 import Footer from './components/Footer/Footer'
+import Form from './components/Form/Form'
 import Header from './components/Header/Header'
 import ModalFormButtonClose from './images/ModalFormButtonClose.svg'
 import ModalFormButtonOpen from './images/ModalFormOpen.svg'
@@ -15,8 +16,7 @@ Modal.setAppElement('#root')
 
 export const App = () => {
 	const [modalIsOpen, setModalIsOpen] = useState(false)
-	const openModal = () => setModalIsOpen(true)
-	const closeModal = () => setModalIsOpen(false)
+	const toggleModal = () => setModalIsOpen(!modalIsOpen)
 
 	return (
 		<div className={css.app}>
@@ -27,23 +27,22 @@ export const App = () => {
 				<Route path='/praca' element={<Kariera />} />
 				<Route path='/technika' element={<Technika />} />
 			</Routes>
-			<button className={css.fixedButton} onClick={openModal}>
-				<img src={ModalFormButtonOpen} alt='Open Modal' />
+
+			<button className={css.fixedButton} onClick={toggleModal}>
+				<img
+					src={modalIsOpen ? ModalFormButtonClose : ModalFormButtonOpen}
+					alt={modalIsOpen ? 'Close Modal' : 'Open Modal'}
+				/>
 			</button>
 
 			<Modal
 				isOpen={modalIsOpen}
-				onRequestClose={closeModal}
+				onRequestClose={toggleModal}
 				contentLabel='Modal'
 				className={css.modalContent}
 				overlayClassName={css.modalOverlay}
 			>
-				<div>
-					<h2>Форма в модальном окне</h2>
-					<button onClick={closeModal}>
-						<img src={ModalFormButtonClose} alt='Close Modal' />
-					</button>
-				</div>
+				<Form />
 			</Modal>
 			<Footer />
 		</div>
