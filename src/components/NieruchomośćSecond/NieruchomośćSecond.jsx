@@ -56,6 +56,7 @@ const NieruchomośćSecond = () => {
 								<video
 									className={css.splideImg}
 									// controls
+									playsInline
 									autoPlay
 									muted
 									loop

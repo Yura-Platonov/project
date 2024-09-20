@@ -1,9 +1,14 @@
 import { ErrorMessage, Field, Form, Formik } from 'formik'
-import React from 'react'
+import React, { useState } from 'react'
 import * as Yup from 'yup'
+import ModalError from '../Modals/ModalError'
+import ModalSuccessful from '../Modals/ModalSuccessful'
 import css from './Form.module.css'
 
 const ContactForm = () => {
+	const [modalSuccessIsOpen, setModalSuccessIsOpen] = useState(false)
+	const [modalErrorIsOpen, setModalErrorIsOpen] = useState(false)
+
 	const validationSchema = Yup.object().shape({
 		name: Yup.string().required('Pole nie może być puste.'),
 		email: Yup.string()
@@ -30,157 +35,166 @@ const ContactForm = () => {
 					message: values.message,
 				}),
 			})
-			const data = await response.json()
+			// const data = await response.json()
 
 			if (response.ok) {
-				alert('Email sent!')
+				setModalSuccessIsOpen(true)
 				resetForm()
-				console.log('Succesfull')
 			} else {
-				alert(`Error: ${data.message || 'Something went wrong.'}`)
+				setModalErrorIsOpen(true)
 			}
 		} catch (error) {
-			alert('An unexpected error occurred.')
+			setModalErrorIsOpen(true)
 		} finally {
 			setSubmitting(false)
 		}
 	}
 
 	return (
-		<Formik
-			initialValues={{
-				name: '',
-				email: '',
-				subject: '',
-				message: '',
-				checkbox1: false,
-				checkbox2: false,
-			}}
-			validationSchema={validationSchema}
-			onSubmit={handleSubmit}
-		>
-			{({ isSubmitting, errors, touched }) => (
-				<Form className={css.formContainer}>
-					<h2 className={css.title}>
-						Cześć! <br /> Masz pytanie?
-						<br /> W takim razie zapraszamy do kontaktu z nami !
-					</h2>
-					<div className={css.insideContainer}>
-						<div className={css.flexContainer}>
-							<div className={css.firstSection}>
-								<div className={css.labelContainer}>
-									<label className={css.labelTitle} htmlFor='name'>
-										Imię i nazwisko*
+		<>
+			<Formik
+				initialValues={{
+					name: '',
+					email: '',
+					subject: '',
+					message: '',
+					checkbox1: false,
+					checkbox2: false,
+				}}
+				validationSchema={validationSchema}
+				onSubmit={handleSubmit}
+			>
+				{({ isSubmitting, errors, touched }) => (
+					<Form className={css.formContainer}>
+						<h2 className={css.title}>
+							Cześć! <br /> Masz pytanie?
+							<br /> W takim razie zapraszamy do kontaktu z nami !
+						</h2>
+						<div className={css.insideContainer}>
+							<div className={css.flexContainer}>
+								<div className={css.firstSection}>
+									<div className={css.labelContainer}>
+										<label className={css.labelTitle} htmlFor='name'>
+											Imię i nazwisko*
+										</label>
+										<Field
+											className={css.formInput}
+											id='name'
+											type='text'
+											name='name'
+											autoComplete='off'
+										/>
+										<ErrorMessage
+											className={css.errorMsg}
+											name='name'
+											component='div'
+										/>
+									</div>
+
+									<div className={css.labelContainer}>
+										<label className={css.labelTitle} htmlFor='email'>
+											Adres e-mail*
+										</label>
+										<Field
+											className={css.formInput}
+											id='email'
+											type='email'
+											name='email'
+											autoComplete='on'
+										/>
+										<ErrorMessage
+											className={css.errorMsg}
+											name='email'
+											component='div'
+										/>
+									</div>
+
+									<div className={css.labelContainer}>
+										<label className={css.labelTitle} htmlFor='subject'>
+											Numer telefonu
+										</label>
+										<Field
+											className={css.formInput}
+											type='text'
+											name='subject'
+											id='subject'
+										/>
+									</div>
+								</div>
+
+								<div className={css.secondSection}>
+									<label className={css.labelTitle} htmlFor='message'>
+										Wiadomość*
 									</label>
 									<Field
-										className={css.formInput}
-										id='name'
-										type='text'
-										name='name'
-										autoComplete='off'
+										className={css.formTextarea}
+										as='textarea'
+										id='message'
+										name='message'
 									/>
 									<ErrorMessage
 										className={css.errorMsg}
-										name='name'
+										name='message'
 										component='div'
-									/>
-								</div>
-
-								<div className={css.labelContainer}>
-									<label className={css.labelTitle} htmlFor='email'>
-										Adres e-mail*
-									</label>
-									<Field
-										className={css.formInput}
-										id='email'
-										type='email'
-										name='email'
-										autoComplete='on'
-									/>
-									<ErrorMessage
-										className={css.errorMsg}
-										name='email'
-										component='div'
-									/>
-								</div>
-
-								<div className={css.labelContainer}>
-									<label className={css.labelTitle} htmlFor='subject'>
-										Numer telefonu
-									</label>
-									<Field
-										className={css.formInput}
-										type='text'
-										name='subject'
-										id='subject'
 									/>
 								</div>
 							</div>
-
-							<div className={css.secondSection}>
-								<label className={css.labelTitle} htmlFor='message'>
-									Wiadomość*
-								</label>
+							<label className={css.checkbox}>
 								<Field
-									className={css.formTextarea}
-									as='textarea'
-									id='message'
-									name='message'
+									className={css.customCheckboxInput}
+									type='checkbox'
+									name='checkbox1'
 								/>
-								<ErrorMessage
-									className={css.errorMsg}
-									name='message'
-									component='div'
+								<span className={css.customCheckbox}></span>
+								<p
+									className={`${css.text} ${
+										errors.checkbox1 && touched.checkbox1 ? css.errorText : ''
+									}`}
+								>
+									Wyrażam zgodę na kontakt telefoniczny (również MMS, SMS) w
+									celu otrzymywania informacji  m.in. o oferowanych usługach,
+									nowych możliwościach ofertowych i promocyjnych.
+								</p>
+							</label>
+
+							<label className={css.checkbox}>
+								<Field
+									className={css.customCheckboxInput}
+									type='checkbox'
+									name='checkbox2'
 								/>
-							</div>
+								<span className={css.customCheckbox}></span>
+								<p
+									className={`${css.text} ${
+										errors.checkbox2 && touched.checkbox2 ? css.errorText : ''
+									}`}
+								>
+									Wyrażam zgodę na kontakt elektroniczny (email) w celu
+									otrzymywania informacji o  m.in. o oferowanych usługach,
+									nowych możliwościach ofertowych i promocyjnych.
+								</p>
+							</label>
+
+							<button
+								className={css.submitButtom}
+								type='submit'
+								disabled={isSubmitting}
+							>
+								Wyślij
+							</button>
 						</div>
-						<label className={css.checkbox}>
-							<Field
-								className={css.customCheckboxInput}
-								type='checkbox'
-								name='checkbox1'
-							/>
-							<span className={css.customCheckbox}></span>
-							<p
-								className={`${css.text} ${
-									errors.checkbox1 && touched.checkbox1 ? css.errorText : ''
-								}`}
-							>
-								Wyrażam zgodę na kontakt telefoniczny (również MMS, SMS) w celu
-								otrzymywania informacji  m.in. o oferowanych usługach, nowych
-								możliwościach ofertowych i promocyjnych.
-							</p>
-						</label>
-
-						<label className={css.checkbox}>
-							<Field
-								className={css.customCheckboxInput}
-								type='checkbox'
-								name='checkbox2'
-							/>
-							<span className={css.customCheckbox}></span>
-							<p
-								className={`${css.text} ${
-									errors.checkbox2 && touched.checkbox2 ? css.errorText : ''
-								}`}
-							>
-								Wyrażam zgodę na kontakt elektroniczny (email) w celu
-								otrzymywania informacji o  m.in. o oferowanych usługach, nowych
-								możliwościach ofertowych i promocyjnych.
-							</p>
-						</label>
-
-						<button
-							className={css.submitButtom}
-							type='submit'
-							disabled={isSubmitting}
-						>
-							Wyślij
-						</button>
-					</div>
-				</Form>
-			)}
-		</Formik>
+					</Form>
+				)}
+			</Formik>
+			<ModalSuccessful
+				isOpen={modalSuccessIsOpen}
+				onRequestClose={() => setModalSuccessIsOpen(false)}
+			/>
+			<ModalError
+				isOpen={modalErrorIsOpen}
+				onRequestClose={() => setModalErrorIsOpen(false)}
+			/>
+		</>
 	)
 }
 

@@ -61,6 +61,7 @@ const NieruchomośćFirst = () => {
 									className={css.splideImg}
 									// controls
 									autoPlay
+									playsInline
 									muted
 									loop
 									onClick={e => openModal(index, e)}

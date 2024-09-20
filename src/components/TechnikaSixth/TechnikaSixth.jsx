@@ -55,6 +55,7 @@ const TechnikaSixth = () => {
 									// controls
 									autoPlay
 									muted
+									playsInline
 									loop
 									onClick={e => openModal(index, e)}
 								>
