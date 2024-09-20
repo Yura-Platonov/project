@@ -1,11 +1,14 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import React, { useState } from 'react'
-import image1 from '../../images/House1.jpg'
-// import image2 from '../../images/technikaSection1.2.jpg'
-// import image3 from '../../images/technikaSection1.3.jpg'
-// import image4 from '../../images/technikaSection1.4.jpg'
-// import image5 from '../../images/technikaSection1.5.jpg'
+import image1 from '../../images/House1.1.jpg'
+import image2 from '../../images/House1.2.jpg'
+import image3 from '../../images/House1.3.jpg'
+import image4 from '../../images/House1.4.jpg'
+import image5 from '../../images/House1.5.jpg'
+import image6 from '../../images/House1.6.jpg'
+import image7 from '../../images/House1.7.jpg'
+import video1 from '../../images/House1Video.mp4'
 import { ReactComponent as HomeGospodarcha } from '../../images/homeGospodarcha.svg'
 import { ReactComponent as HomeInside } from '../../images/homeInside.svg'
 import { ReactComponent as HomeOutside } from '../../images/homeOutside.svg'
@@ -13,13 +16,14 @@ import { ReactComponent as HomePlan } from '../../images/homePlan.svg'
 import ImageModal from '../ImageModal/ImageModal'
 import css from './NieruchomośćFirst.module.css'
 
-const images = [image1]
+const images = [video1, image1, image2, image3, image4, image5, image6, image7]
 
 const NieruchomośćFirst = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-	const openModal = index => {
+	const openModal = (index, event) => {
+		event.preventDefault()
 		setCurrentImageIndex(index)
 		setIsModalOpen(true)
 		document.body.style.overflow = 'hidden'
@@ -50,14 +54,28 @@ const NieruchomośćFirst = () => {
 					options={{ rewind: true, pagination: false }}
 					aria-label='React Splide'
 				>
-					{images.map((image, index) => (
+					{images.map((media, index) => (
 						<SplideSlide key={index}>
-							<img
-								src={image}
-								alt={`Slide ${index + 1}`}
-								className={css.splideImg}
-								onClick={() => openModal(index)}
-							/>
+							{index === 0 ? (
+								<video
+									className={css.splideImg}
+									// controls
+									autoPlay
+									muted
+									loop
+									onClick={e => openModal(index, e)}
+								>
+									<source src={media} type='video/mp4' />
+									Your brouser doesnt support video.
+								</video>
+							) : (
+								<img
+									src={media}
+									alt={`Slide ${index + 1}`}
+									className={css.splideImg}
+									onClick={e => openModal(index, e)}
+								/>
+							)}
 						</SplideSlide>
 					))}
 				</Splide>

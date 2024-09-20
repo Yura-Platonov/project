@@ -5,10 +5,11 @@ import video1 from '../../images/technikaSection6.0.mp4'
 import image1 from '../../images/technikaSection6.1.jpg'
 import image2 from '../../images/technikaSection6.2.jpg'
 import image3 from '../../images/technikaSection6.3.jpg'
+import image4 from '../../images/technikaSection6.4.jpg'
 import ImageModal from '../ImageModal/ImageModal'
 import css from '../TechnikaFirst/TechnikaFirst.module.css'
 
-const images = [video1, image1, image2, image3]
+const images = [video1, image1, image2, image3, image4]
 
 const TechnikaSixth = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
