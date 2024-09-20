@@ -1,31 +1,73 @@
 .modalContent {
-	background: white;
-	padding: 20px;
+	position: relative;
+	/* padding: 20px; */
 	border-radius: 10px;
-	width: 400px;
+	width: 500px;
 	margin: auto;
 	text-align: center;
+	background: #fff;
+}
+
+.titleContainer {
+	display: flex;
+	align-items: flex-end;
+	padding-bottom: 20px;
+	justify-content: center;
+	height: 160px;
+	border-bottom: 20px solid #ffa502;
+	background: #00304a;
+	border-radius: 10px 10px 0 0;
+}
+
+.modalSvg {
+	position: absolute;
+	top: -70px;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .modalOverlay {
-	background: rgba(0, 0, 0, 0.5);
+	background-color: rgba(0, 0, 0, 0.75);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 11;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .modalTitle {
-	font-size: 24px;
-	margin-bottom: 10px;
+	font-size: 36px;
+	/* margin-top: 30px; */
+	font-weight: 600;
+	color: #fff;
 }
 
 .modalMessage {
-	font-size: 16px;
-	margin-bottom: 20px;
+	font-size: 24px;
+	margin: 40px;
+	font-weight: 600;
 }
 
 .closeButton {
-	background: #007bff;
-	color: white;
-	border: none;
-	padding: 10px 20px;
-	border-radius: 5px;
+	width: 130px;
+	height: 50px;
+	font-size: 18px;
+	font-weight: 500;
+	margin-bottom: 50px;
+	color: #00304a;
+	background: #fff;
+	border: 1px solid #00304a;
+	border-radius: 14px;
 	cursor: pointer;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+	color: #fff;
+	background: #00304a;
+	box-shadow: 0 4px 20px rgba(255, 165, 2, 0.5);
 }

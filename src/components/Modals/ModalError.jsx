@@ -1,6 +1,7 @@
 import React from 'react'
 import Modal from 'react-modal'
-import css from './ModalError.module.css'
+import { ReactComponent as ModalErrorSvg } from '../../images/ModalError.svg'
+import css from './ModalSuccessful.module.css'
 Modal.setAppElement('#root')
 
 const ModalError = ({ isOpen, onRequestClose }) => {
@@ -12,10 +13,14 @@ const ModalError = ({ isOpen, onRequestClose }) => {
 			className={css.modalContent}
 			overlayClassName={css.modalOverlay}
 		>
-			<h2 className={css.modalTitle}>Błąd!</h2>
+			<ModalErrorSvg className={css.modalSvg} />
+			<div className={css.titleContainer}>
+				<h2 className={css.modalTitle}>Błąd!</h2>
+			</div>
 			<p className={css.modalMessage}>
-				Wystąpił problem podczas wysyłania formularza. Spróbuj ponownie później
-				lub skontaktuj się z nami bezpośrednio.
+				Wystąpił problem podczas wysyłania formularza.
+				<br /> <br />
+				Spróbuj ponownie później lub skontaktuj się z nami bezpośrednio.
 			</p>
 			<button className={css.closeButton} onClick={onRequestClose}>
 				Zamknij

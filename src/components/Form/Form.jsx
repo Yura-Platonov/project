@@ -39,12 +39,16 @@ const ContactForm = () => {
 
 			if (response.ok) {
 				setModalSuccessIsOpen(true)
+				console.log('12')
+
 				resetForm()
 			} else {
 				setModalErrorIsOpen(true)
+				console.log('13')
 			}
 		} catch (error) {
 			setModalErrorIsOpen(true)
+			console.log('14')
 		} finally {
 			setSubmitting(false)
 		}
@@ -188,6 +192,7 @@ const ContactForm = () => {
 			</Formik>
 			<ModalSuccessful
 				isOpen={modalSuccessIsOpen}
+				// isOpen={true}
 				onRequestClose={() => setModalSuccessIsOpen(false)}
 			/>
 			<ModalError
