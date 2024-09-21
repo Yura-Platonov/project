@@ -13,7 +13,7 @@ const DomyMain = () => {
 				<li className={css.mainItem}>
 					<h3 className={css.mainSubTitle}>Sprzedaż nieruchomości</h3>
 					<div className={css.continerFlex}>
-						<img src={DomyHouse} alt='house' />
+						<img className={css.itemImg} src={DomyHouse} alt='house' />
 						<div className={css.textContainer}>
 							<p className={css.textCenter}>
 								<span className={css.textAccent}>
@@ -50,7 +50,7 @@ const DomyMain = () => {
 				<li className={css.mainItem}>
 					<h3 className={css.mainSubTitle}>Wynajem sprzętu budowlanego</h3>
 					<div className={css.continerFlex}>
-						<img src={DomyTechnika} alt='technika' />
+						<img className={css.itemImg} src={DomyTechnika} alt='technika' />
 						<div className={css.textContainer}>
 							<p className={css.textCenter}>
 								Będąca na rynku od 2018r. Firma Havrysh3 Sp. z o.o. świadczy
@@ -81,7 +81,7 @@ const DomyMain = () => {
 				<li className={css.mainItem}>
 					<h3 className={css.mainSubTitle}>Praca</h3>
 					<div className={css.continerFlex}>
-						<img src={DomyPraca} alt='praca' />
+						<img className={css.itemImg} src={DomyPraca} alt='praca' />
 						<div className={css.textContainer}>
 							<p className={css.textCenter}>
 								Firma budowlana Havrysh zaprasza do pracy Ukraińców
