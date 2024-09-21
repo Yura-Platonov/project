@@ -199,6 +199,7 @@
 	margin: 0;
 	@media screen and (max-width: 768px) {
 		font-size: 16px;
+		padding: 20px;
 	}
 }
 
@@ -214,5 +215,6 @@
 	color: #ffffff;
 	@media screen and (max-width: 768px) {
 		height: 50px;
+		font-size: 18px;
 	}
 }

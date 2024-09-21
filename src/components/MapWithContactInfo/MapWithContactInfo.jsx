@@ -1,12 +1,13 @@
 import React from 'react'
-import css from './MapWithContactInfo.module.css'
 import { ReactComponent as Facebook } from '../../images/facebookFooter.svg'
 import { ReactComponent as Gmail } from '../../images/gmailFooter.svg'
+import css from './MapWithContactInfo.module.css'
 
 const MapWithContactInfo = () => {
 	return (
 		<div className={css.container}>
 			<iframe
+				className={css.map}
 				width='500'
 				height='500'
 				src='https://maps.google.com/maps?width=500&amp;height=500&amp;hl=en&amp;q=Franciszka%20Walczaka%20114,%2066-400%20Gorz%C3%B3w%20Wielkopolski,%20Poland+(Havrysh)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed'
