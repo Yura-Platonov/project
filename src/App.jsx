@@ -30,6 +30,7 @@ export const App = () => {
 
 			<button className={css.fixedButton} onClick={toggleModal}>
 				<img
+					className={css.fixedImg}
 					src={modalIsOpen ? ModalFormButtonClose : ModalFormButtonOpen}
 					alt={modalIsOpen ? 'Close Modal' : 'Open Modal'}
 				/>
