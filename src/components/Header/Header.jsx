@@ -38,22 +38,22 @@ const Header = () => {
 			borderBottomClass = css.borderBottomDefault
 	}
 
-	let borderLeftClass
+	let borderRightClass
 	switch (location.pathname) {
 		case '/':
-			borderLeftClass = css.borderLeftHome
+			borderRightClass = css.borderRightHome
 			break
 		case '/zabudowania':
-			borderLeftClass = css.borderLeftNieruchomość
+			borderRightClass = css.borderRightNieruchomość
 			break
 		case '/technika':
-			borderLeftClass = css.borderLeftTechnika
+			borderRightClass = css.borderRightTechnika
 			break
 		case '/praca':
-			borderLeftClass = css.borderLeftKariera
+			borderRightClass = css.borderRightKariera
 			break
 		default:
-			borderLeftClass = css.borderLeftHome
+			borderRightClass = css.borderRightHome
 	}
 
 	return (
@@ -88,7 +88,8 @@ const Header = () => {
 			</button>
 			{menuOpen && (
 				<div className={css.mobileMenu}>
-					<div className={borderLeftClass}></div>
+					<div className={borderRightClass}></div>
+					<div className={css.borderTop}></div>
 					<ul className={css.mobileNavList}>
 						<li className={css.mobileNavItem}>
 							<NavLink
