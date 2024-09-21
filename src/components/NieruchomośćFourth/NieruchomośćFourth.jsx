@@ -69,19 +69,25 @@ const NieruchomośćFourth = () => {
 							Powierzchnia użytkowa parteru
 						</p>
 						<HomeInside />
-						<p className={css.houseSpecificationText}>110,18 m2</p>
+						<p className={css.houseSpecificationText}>
+							110,18 m<sup>2</sup>
+						</p>
 					</li>
 					<li className={css.houseSpecificationItem}>
 						<p className={css.houseSpecificationText}>
 							Powierzchnia użytkowa piętra{' '}
 						</p>
 						<HomeStairs />
-						<p className={css.houseSpecificationText}>107,23 m2</p>
+						<p className={css.houseSpecificationText}>
+							107,23 m<sup>2</sup>
+						</p>
 					</li>
 					<li className={css.houseSpecificationItem}>
 						<p className={css.houseSpecificationText}>Powierzchnia działki </p>
 						<HomeOutside />
-						<p className={css.houseSpecificationText}>1068 m2</p>
+						<p className={css.houseSpecificationText}>
+							1068 m<sup>2</sup>
+						</p>
 					</li>
 				</ul>
 			</div>
@@ -97,10 +103,11 @@ const NieruchomośćFourth = () => {
 						Budynek zrealizowany został w technologii tradycyjnej .<br />
 						<br />
 						Cechą charakterystyczną niniejszych nieruchomości jest usytuowany w
-						części parterowej wielostanowiskowy garaż o powierzchni ok 90 m2 .
-						Duża wysokość umożliwia montaż podnośników samochodowych . Piętro
-						przeznaczone jest na część mieszkalną . Budynek posadowiony jest na
-						działce o powierzchni 1000m2 w sąsiedztwie lasku brzozowego .<br />
+						części parterowej wielostanowiskowy garaż o powierzchni ok 90 m
+						<sup>2</sup> . Duża wysokość umożliwia montaż podnośników
+						samochodowych . Piętro przeznaczone jest na część mieszkalną .
+						Budynek posadowiony jest na działce o powierzchni 1000m<sup>2</sup>{' '}
+						w sąsiedztwie lasku brzozowego .<br />
 						<br />
 						Budynek może mieć charakter prywatny oraz komercyjny.
 						<br />
@@ -123,17 +130,17 @@ const NieruchomośćFourth = () => {
 						<span className={css.specificationItemTextAccentItalic}>
 							Powierzchnia użytkowa parteru
 						</span>{' '}
-						: 110,18 m2;
+						: 110,18 m<sup>2</sup>;
 						<br />
 						<span className={css.specificationItemTextAccentItalic}>
 							Powierzchnia użytkowa piętra
 						</span>
-						: 107,23 m2;
+						: 107,23 m<sup>2</sup>;
 						<br />
 						<span className={css.specificationItemTextAccentItalic}>
 							Powierzchnia działki
 						</span>
-						: 1068 m2;
+						: 1068 m<sup>2</sup>;
 						<br />
 						<span className={css.specificationItemTextAccentItalic}>
 							Pomieszczenia
@@ -150,8 +157,8 @@ const NieruchomośćFourth = () => {
 						Standard wykonania <br />
 						a) Pod klucz.
 						<br />
-						Na piętrze możliwość przebudowy na mieszkanie o powierzchni 105 m2.{' '}
-						<br />
+						Na piętrze możliwość przebudowy na mieszkanie o powierzchni 105 m
+						<sup>2</sup>. <br />
 						<br />
 						<span className={css.specificationItemTextAccent}>
 							Planowany termin przekazania obiektów: IV kwartał 2024r.{' '}
