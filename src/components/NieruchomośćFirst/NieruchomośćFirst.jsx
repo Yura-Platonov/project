@@ -86,25 +86,33 @@ const NieruchomośćFirst = () => {
 				<ul className={css.houseSpecificationList}>
 					<li className={css.houseSpecificationItem}>
 						<p className={css.houseSpecificationText}>Powierzchnia działki</p>
-						<HomeOutside />
-						<p className={css.houseSpecificationText}>700 m2</p>
+						<HomeOutside className={css.imageSvg} />
+						<p className={css.houseSpecificationText}>
+							700 m<sup>2</sup>
+						</p>
 					</li>
 					<li className={css.houseSpecificationItem}>
 						<p className={css.houseSpecificationText}>Powierzchnia użytkowa</p>
-						<HomeInside />
-						<p className={css.houseSpecificationText}>144,74 m2</p>
+						<HomeInside className={css.imageSvg} />
+						<p className={css.houseSpecificationText}>
+							144,74 m<sup>2</sup>
+						</p>
 					</li>
 					<li className={css.houseSpecificationItem}>
 						<p className={css.houseSpecificationText}>
 							Powierzchnia gospodarcza{' '}
 						</p>
-						<HomeGospodarcha />
-						<p className={css.houseSpecificationText}>39,18 m2</p>
+						<HomeGospodarcha className={css.imageSvg} />
+						<p className={css.houseSpecificationText}>
+							39,18 m<sup>2</sup>
+						</p>
 					</li>
 					<li className={css.houseSpecificationItem}>
 						<p className={css.houseSpecificationText}>Powierzchnia działki </p>
-						<HomePlan />
-						<p className={css.houseSpecificationText}>183,92 m2</p>
+						<HomePlan className={css.imageSvg} />
+						<p className={css.houseSpecificationText}>
+							183,92 m<sup>2</sup>
+						</p>
 					</li>
 				</ul>
 			</div>
@@ -126,8 +134,9 @@ const NieruchomośćFirst = () => {
 						<br />
 						Wychodząc naprzeciw obecnym trendom każdy lokal posiada podwójny
 						garaż znajdujący się w bryle budynku. Budynki posadowione są na
-						działkach o powierzchni 1400m2 każdy , co daje nam możliwość
-						zagospodarowania ogrodów o powierzchni ok 600m2 do każdego lokalu
+						działkach o powierzchni 1400m<sup>2</sup> każdy , co daje nam
+						możliwość zagospodarowania ogrodów o powierzchni ok 600m<sup>2</sup>{' '}
+						do każdego lokalu
 						<br />
 						<br />
 						Charakterystyka jednego lokalu:
@@ -141,22 +150,22 @@ const NieruchomośćFirst = () => {
 						<span className={css.specificationItemTextAccentItalic}>
 							Powierzchnia użytkowa
 						</span>{' '}
-						: 144,74 m2;
+						: 144,74 m<sup>2</sup>;
 						<br />
 						<span className={css.specificationItemTextAccentItalic}>
 							Powierzchnia gospodarcza
 						</span>
-						: 39,18 m2;
+						: 39,18 m<sup>2</sup>;
 						<br />
 						<span className={css.specificationItemTextAccentItalic}>
 							Powierzchnia całkowita
 						</span>
-						: 183,92 m2;
+						: 183,92 m<sup>2</sup>;
 						<br />
 						<span className={css.specificationItemTextAccentItalic}>
 							Powierzchnia działki
 						</span>{' '}
-						: 700 m2;
+						: 700 m<sup>2</sup>;
 						<br />
 						<span className={css.specificationItemTextAccentItalic}>
 							Pomieszczenia

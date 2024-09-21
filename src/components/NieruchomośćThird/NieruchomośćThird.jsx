@@ -69,19 +69,25 @@ const NieruchomośćThird = () => {
 							Powierzchnia użytkowa parteru
 						</p>
 						<HomeInside />
-						<p className={css.houseSpecificationText}>111,21 m2</p>
+						<p className={css.houseSpecificationText}>
+							111,21 m<sup>2</sup>
+						</p>
 					</li>
 					<li className={css.houseSpecificationItem}>
 						<p className={css.houseSpecificationText}>
 							Powierzchnia użytkowa piętra{' '}
 						</p>
 						<HomeStairs />
-						<p className={css.houseSpecificationText}>103,56 m2</p>
+						<p className={css.houseSpecificationText}>
+							103,56 m<sup>2</sup>
+						</p>
 					</li>
 					<li className={css.houseSpecificationItem}>
 						<p className={css.houseSpecificationText}>Powierzchnia działki </p>
 						<HomeOutside />
-						<p className={css.houseSpecificationText}>1100 m2</p>
+						<p className={css.houseSpecificationText}>
+							1100 m<sup>2</sup>
+						</p>
 					</li>
 				</ul>
 			</div>
@@ -95,8 +101,8 @@ const NieruchomośćThird = () => {
 						( ok 6 km ) od morza <br />
 						<br />
 						Budynek zrealizowany został w technologii tradycyjnej , posadowiony
-						jest na działce o powierzchni 1100m2 w sąsiedztwie lasku brzozowego
-						na nowo powstającym osiedlu domów jednorodzinnych <br />
+						jest na działce o powierzchni 1100m<sup>2</sup> w sąsiedztwie lasku
+						brzozowego na nowo powstającym osiedlu domów jednorodzinnych <br />
 						<br />
 						Kształt i charakter małej rezydencji doskonale podkreśla wysoki
 						standard wykończenia.
@@ -113,17 +119,17 @@ const NieruchomośćThird = () => {
 						<span className={css.specificationItemTextAccentItalic}>
 							Powierzchnia użytkowa parteru
 						</span>{' '}
-						: 111,21 m2;
+						: 111,21 m<sup>2</sup>;
 						<br />
 						<span className={css.specificationItemTextAccentItalic}>
 							Powierzchnia użytkowa piętra
 						</span>
-						: 103,56 m2;
+						: 103,56 m<sup>2</sup>;
 						<br />
 						<span className={css.specificationItemTextAccentItalic}>
 							Powierzchnia działki
 						</span>
-						: 1100 m2;
+						: 1100 m<sup>2</sup>;
 						<br />
 						<span className={css.specificationItemTextAccentItalic}>
 							Pomieszczenia
@@ -140,7 +146,8 @@ const NieruchomośćThird = () => {
 						Standard wykonania <br />
 						a) Pod klucz.
 						<br />
-						Na piętrze możliwość przebudowy na mieszkanie o powierzchni 92 m2.
+						Na piętrze możliwość przebudowy na mieszkanie o powierzchni 92 m
+						<sup>2</sup>.
 						<br />
 						<br />
 						<span className={css.specificationItemTextAccent}>

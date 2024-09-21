@@ -83,17 +83,23 @@ const NieruchomośćSecond = () => {
 					<li className={css.houseSpecificationItem}>
 						<p className={css.houseSpecificationText}>Powierzchnia działki</p>
 						<HomeOutside />
-						<p className={css.houseSpecificationText}>550 m2</p>
+						<p className={css.houseSpecificationText}>
+							550 m<sup>2</sup>
+						</p>
 					</li>
 					<li className={css.houseSpecificationItem}>
 						<p className={css.houseSpecificationText}>Kubatura</p>
 						<HomeKubatura />
-						<p className={css.houseSpecificationText}>657,50 m3</p>
+						<p className={css.houseSpecificationText}>
+							657,50 m<sup>3</sup>
+						</p>
 					</li>
 					<li className={css.houseSpecificationItem}>
 						<p className={css.houseSpecificationText}>Powierzchnia użytkowa </p>
 						<HomeInside />
-						<p className={css.houseSpecificationText}>130,71 m2</p>
+						<p className={css.houseSpecificationText}>
+							130,71 m<sup>2</sup>
+						</p>
 					</li>
 				</ul>
 			</div>
@@ -110,8 +116,9 @@ const NieruchomośćSecond = () => {
 						miejskiej . Dodatkowo w pobliżu znajduje się nowo wybudowane
 						przedszkole oraz przepiękne tereny leśne umożliwiające uprawianie
 						turystyki pieszej oraz rowerowej . Budynki posadowione są na
-						działkach o powierzchni 1100m2 każdy , co daje nam możliwość
-						zagospodarowania ogrodów o powierzchni ok 450m2 do każdego lokalu .
+						działkach o powierzchni 1100m<sup>2</sup> każdy , co daje nam
+						możliwość zagospodarowania ogrodów o powierzchni ok 450m<sup>2</sup>{' '}
+						do każdego lokalu .
 						<br />
 						<br />
 						Charakterystyka jednego lokalu:
@@ -125,17 +132,17 @@ const NieruchomośćSecond = () => {
 						<span className={css.specificationItemTextAccentItalic}>
 							Powierzchnia użytkowa
 						</span>{' '}
-						: 130,71 m2;
+						: 130,71 m<sup>2</sup>;
 						<br />
 						<span className={css.specificationItemTextAccentItalic}>
 							Kubatura
 						</span>
-						: 657,50 m3;
+						: 657,50 m<sup>3</sup>;
 						<br />
 						<span className={css.specificationItemTextAccentItalic}>
 							Powierzchnia działki
 						</span>
-						: 550 m2;
+						: 550 m<sup>2</sup>;
 						<br />
 						<span className={css.specificationItemTextAccentItalic}>
 							Pomieszczenia
