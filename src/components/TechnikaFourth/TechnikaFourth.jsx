@@ -1,18 +1,22 @@
 import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import React, { useState } from 'react'
+import video1 from '../../images/technikaSection4.0.mp4'
 import image1 from '../../images/technikaSection4.1.jpg'
 import image2 from '../../images/technikaSection4.2.jpg'
+import image3 from '../../images/technikaSection4.3.jpg'
+import image4 from '../../images/technikaSection4.4.jpg'
 import ImageModal from '../ImageModal/ImageModal'
 import css from '../TechnikaFirst/TechnikaFirst.module.css'
 
-const images = [image1, image2]
+const images = [video1, image1, image2, image3, image4]
 
 const TechnikaFourth = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-	const openModal = index => {
+	const openModal = (index, event) => {
+		event.preventDefault()
 		setCurrentImageIndex(index)
 		setIsModalOpen(true)
 		document.body.style.overflow = 'hidden'
@@ -41,14 +45,29 @@ const TechnikaFourth = () => {
 					options={{ rewind: true, pagination: false }}
 					aria-label='React Splide'
 				>
-					{images.map((image, index) => (
+					{images.map((media, index) => (
 						<SplideSlide key={index}>
-							<img
-								src={image}
-								alt={`Slide ${index + 1}`}
-								className={css.splideImg}
-								onClick={() => openModal(index)}
-							/>
+							{index === 0 ? (
+								<video
+									className={css.splideImg}
+									// controls
+									autoPlay
+									muted
+									playsInline
+									loop
+									onClick={e => openModal(index, e)}
+								>
+									<source src={media} type='video/mp4' />
+									Your brouser doesnt support video.
+								</video>
+							) : (
+								<img
+									src={media}
+									alt={`Slide ${index + 1}`}
+									className={css.splideImg}
+									onClick={e => openModal(index, e)}
+								/>
+							)}
 						</SplideSlide>
 					))}
 				</Splide>

@@ -3,10 +3,11 @@ import '@splidejs/react-splide/css'
 import React, { useState } from 'react'
 import image1 from '../../images/technikaSection8.1.jpg'
 import image2 from '../../images/technikaSection8.2.jpg'
+import image3 from '../../images/technikaSection8.3.jpg'
 import ImageModal from '../ImageModal/ImageModal'
 import css from '../TechnikaFirst/TechnikaFirst.module.css'
 
-const images = [image1, image2]
+const images = [image1, image2, image3]
 
 const TechnikaEighth = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
