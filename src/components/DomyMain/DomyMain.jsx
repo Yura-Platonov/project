@@ -11,9 +11,13 @@ const DomyMain = () => {
 		<section className={css.mainSection}>
 			<ul className={css.mainList}>
 				<li className={css.mainItem}>
-					<h3 className={css.mainSubTitle}>Sprzedaż nieruchomości</h3>
+					<Link to='/zabudowania' className={css.mainLink}>
+						<h3 className={css.mainSubTitle}>Sprzedaż nieruchomości</h3>
+					</Link>
 					<div className={css.continerFlex}>
-						<img className={css.itemImg} src={DomyHouse} alt='house' />
+						<Link to='/zabudowania' className={css.linkRedirect}>
+							<img className={css.itemImg} src={DomyHouse} alt='house' />
+						</Link>
 						<div className={css.textContainer}>
 							<p className={css.textCenter}>
 								<span className={css.textAccent}>
@@ -48,9 +52,14 @@ const DomyMain = () => {
 					</div>
 				</li>
 				<li className={css.mainItem}>
-					<h3 className={css.mainSubTitle}>Wynajem sprzętu budowlanego</h3>
+					<Link to='/technika' className={css.mainLink}>
+						<h3 className={css.mainSubTitle}>Wynajem sprzętu budowlanego</h3>
+					</Link>
 					<div className={css.continerFlex}>
-						<img className={css.itemImg} src={DomyTechnika} alt='technika' />
+						<Link to='/technika' className={css.linkRedirect}>
+							<img className={css.itemImg} src={DomyTechnika} alt='technika' />{' '}
+						</Link>
+
 						<div className={css.textContainer}>
 							<p className={css.textCenter}>
 								Będąca na rynku od 2018r. Firma Havrysh3 Sp. z o.o. świadczy
@@ -79,9 +88,14 @@ const DomyMain = () => {
 					</div>
 				</li>
 				<li className={css.mainItem}>
-					<h3 className={css.mainSubTitle}>Praca</h3>
+					<Link to='/praca' className={css.mainLink}>
+						<h3 className={css.mainSubTitle}>Praca</h3>
+					</Link>
 					<div className={css.continerFlex}>
-						<img className={css.itemImg} src={DomyPraca} alt='praca' />
+						<Link to='/praca' className={css.linkRedirect}>
+							<img className={css.itemImg} src={DomyPraca} alt='praca' />{' '}
+						</Link>
+
 						<div className={css.textContainer}>
 							<p className={css.textCenter}>
 								Firma budowlana Havrysh zaprasza do pracy Ukraińców

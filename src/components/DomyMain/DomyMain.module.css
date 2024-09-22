@@ -44,9 +44,9 @@
 
 @media screen and (max-width: 768px) {
 	.mainItem::before {
-		left: -560px;
+		left: -559px;
 		width: 560px;
-		height: 35.8px;
+		height: 35px;
 		background: #00304a;
 		z-index: -1;
 	}
@@ -64,7 +64,19 @@
 		font-size: 16px;
 		margin-left: 0;
 		height: 35px;
+		width: max-content;
 	}
+}
+
+.mainLink {
+	width: max-content;
+	display: block;
+	cursor: pointer;
+}
+
+.linkRedirect {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 .continerFlex {
@@ -84,8 +96,6 @@
 	@media screen and (max-width: 768px) {
 		width: 210px;
 		height: auto;
-		margin-left: auto;
-		margin-right: auto;
 	}
 }
 
