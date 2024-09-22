@@ -16,7 +16,13 @@ const DomyMain = () => {
 					</Link>
 					<div className={css.continerFlex}>
 						<Link to='/zabudowania' className={css.linkRedirect}>
-							<img className={css.itemImg} src={DomyHouse} alt='house' />
+							<img
+								width='565'
+								height='450'
+								className={css.itemImg}
+								src={DomyHouse}
+								alt='house'
+							/>
 						</Link>
 						<div className={css.textContainer}>
 							<p className={css.textCenter}>
@@ -57,7 +63,13 @@ const DomyMain = () => {
 					</Link>
 					<div className={css.continerFlex}>
 						<Link to='/technika' className={css.linkRedirect}>
-							<img className={css.itemImg} src={DomyTechnika} alt='technika' />{' '}
+							<img
+								width='565'
+								height='450'
+								className={css.itemImg}
+								src={DomyTechnika}
+								alt='technika'
+							/>{' '}
 						</Link>
 
 						<div className={css.textContainer}>
@@ -93,7 +105,13 @@ const DomyMain = () => {
 					</Link>
 					<div className={css.continerFlex}>
 						<Link to='/praca' className={css.linkRedirect}>
-							<img className={css.itemImg} src={DomyPraca} alt='praca' />{' '}
+							<img
+								width='565'
+								height='450'
+								className={css.itemImg}
+								src={DomyPraca}
+								alt='praca'
+							/>{' '}
 						</Link>
 
 						<div className={css.textContainer}>
