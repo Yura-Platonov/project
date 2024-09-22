@@ -5,6 +5,11 @@ import image1 from '../../images/House2.1.jpg'
 import image2 from '../../images/House2.2.jpg'
 import image3 from '../../images/House2.3.jpg'
 import image4 from '../../images/House2.4.jpg'
+import image5 from '../../images/House2.5.jpg'
+import image6 from '../../images/House2.6.jpg'
+import image7 from '../../images/House2.7.jpg'
+import image8 from '../../images/House2.8.jpg'
+import image9 from '../../images/House2.9.jpg'
 import video1 from '../../images/House2Video.mp4'
 import { ReactComponent as HomeInside } from '../../images/homeInside.svg'
 import { ReactComponent as HomeKubatura } from '../../images/homeKubatura.svg'
@@ -12,7 +17,18 @@ import { ReactComponent as HomeOutside } from '../../images/homeOutside.svg'
 import ImageModal from '../ImageModal/ImageModal'
 import css from '../NieruchomośćFirst/NieruchomośćFirst.module.css'
 
-const images = [video1, image1, image2, image3, image4]
+const images = [
+	video1,
+	image1,
+	image2,
+	image3,
+	image4,
+	image5,
+	image6,
+	image7,
+	image8,
+	image9,
+]
 
 const NieruchomośćSecond = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
