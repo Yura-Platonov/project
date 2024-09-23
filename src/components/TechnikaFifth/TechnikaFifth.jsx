@@ -53,6 +53,7 @@ const TechnikaFifth = () => {
 								src={image}
 								alt={`Slide ${index + 1}`}
 								className={css.splideImg}
+								loading='lazy'
 								onClick={() => openModal(index)}
 							/>
 						</SplideSlide>

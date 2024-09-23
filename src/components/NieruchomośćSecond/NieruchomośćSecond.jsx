@@ -103,6 +103,7 @@ const NieruchomośćSecond = () => {
 									src={media}
 									alt={`Slide ${index + 1}`}
 									className={css.splideImg}
+									loading='lazy'
 									onClick={e => openModal(index + 1, e)}
 								/>
 							</SplideSlide>
