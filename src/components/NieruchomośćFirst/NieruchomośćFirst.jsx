@@ -58,6 +58,9 @@ const NieruchomośćFirst = () => {
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
 	const [isVideoLoaded, setIsVideoLoaded] = useState(false)
 
+	const isMobile = window.innerWidth <= 768
+	const videoSrc = isMobile ? videoMobile : video1
+
 	const openModal = (index, event) => {
 		event.preventDefault()
 		setCurrentImageIndex(index)
@@ -105,16 +108,7 @@ const NieruchomośćFirst = () => {
 							onLoadedData={handleVideoLoad}
 							onClick={e => openModal(0, e)}
 						>
-							<source
-								src={videoMobile}
-								media='(max-width: 768px)'
-								type='video/mp4'
-							/>
-							<source
-								src={video1}
-								media='(min-width: 769px)'
-								type='video/mp4'
-							/>
+							<source src={videoSrc} type='video/mp4' />
 							Your browser doesn't support video.
 						</video>
 					</SplideSlide>
