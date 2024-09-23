@@ -22,6 +22,7 @@ import image7 from '../../images/House3.7.jpg'
 import image8 from '../../images/House3.8.jpg'
 import image9 from '../../images/House3.9.jpg'
 import video1 from '../../images/MainPageVideo.mp4'
+import videoMobile from '../../images/MainPageVideoMob.mp4'
 import { ReactComponent as HomeInside } from '../../images/homeInside.svg'
 import { ReactComponent as HomeOutside } from '../../images/homeOutside.svg'
 import { ReactComponent as HomeStairs } from '../../images/homeStairs.svg'
@@ -88,29 +89,36 @@ const NieruchomośćThird = () => {
 					options={{ rewind: true, pagination: false }}
 					aria-label='React Splide'
 				>
-					{images.map((media, index) => (
-						<SplideSlide key={index}>
-							{index === 0 ? (
-								<video
-									className={css.splideImg}
-									// controls
-									playsInline
-									autoPlay
-									muted
-									loop
-									onClick={e => openModal(index, e)}
-								>
-									<source src={media} type='video/mp4' />
-									Your brouser doesnt support video.
-								</video>
-							) : (
-								<img
-									src={media}
-									alt={`Slide ${index + 1}`}
-									className={css.splideImg}
-									onClick={e => openModal(index, e)}
-								/>
-							)}
+					<SplideSlide>
+						<video
+							className={css.splideImg}
+							autoPlay
+							playsInline
+							muted
+							loop
+							onClick={e => openModal(0, e)}
+						>
+							<source
+								src={videoMobile}
+								media='(max-width: 768px)'
+								type='video/mp4'
+							/>
+							<source
+								src={video1}
+								media='(min-width: 769px)'
+								type='video/mp4'
+							/>
+							Your browser doesn't support video.
+						</video>
+					</SplideSlide>
+					{images.slice(1).map((media, index) => (
+						<SplideSlide key={index + 1}>
+							<img
+								src={media}
+								alt={`Slide ${index + 1}`}
+								className={css.splideImg}
+								onClick={e => openModal(index + 1, e)}
+							/>
 						</SplideSlide>
 					))}
 				</Splide>
