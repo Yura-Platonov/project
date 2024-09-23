@@ -96,16 +96,17 @@ const NieruchomośćSecond = () => {
 							Your browser doesn't support video.
 						</video>
 					</SplideSlide>
-					{images.slice(1).map((media, index) => (
-						<SplideSlide key={index + 1}>
-							<img
-								src={media}
-								alt={`Slide ${index + 1}`}
-								className={css.splideImg}
-								onClick={e => openModal(index + 1, e)}
-							/>
-						</SplideSlide>
-					))}
+					{isVideoLoaded &&
+						images.slice(1).map((media, index) => (
+							<SplideSlide key={index + 1}>
+								<img
+									src={media}
+									alt={`Slide ${index + 1}`}
+									className={css.splideImg}
+									onClick={e => openModal(index + 1, e)}
+								/>
+							</SplideSlide>
+						))}
 				</Splide>
 			</div>
 			<div className={css.houseItemContainerSmall}>
