@@ -31,7 +31,7 @@ import ImageModal from '../ImageModal/ImageModal'
 import css from './NieruchomośćFirst.module.css'
 
 const images = [
-	video1,
+	videoMobile,
 	image1,
 	image2,
 	image3,
