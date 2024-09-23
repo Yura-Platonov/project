@@ -96,6 +96,7 @@ const NieruchomośćFirst = () => {
 							playsInline
 							muted
 							loop
+							preload='auto'
 							onClick={e => openModal(0, e)}
 						>
 							<source
