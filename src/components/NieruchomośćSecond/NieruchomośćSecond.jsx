@@ -35,6 +35,7 @@ const images = [
 const NieruchomośćSecond = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
+	const [isVideoLoaded, setIsVideoLoaded] = useState(false)
 
 	const openModal = (index, event) => {
 		event.preventDefault()
@@ -58,6 +59,10 @@ const NieruchomośćSecond = () => {
 		)
 	}
 
+	const handleVideoLoad = () => {
+		setIsVideoLoaded(true)
+	}
+
 	return (
 		<section className={css.houseSection}>
 			<h2 className={css.houseTitle}>
@@ -75,6 +80,7 @@ const NieruchomośćSecond = () => {
 							playsInline
 							muted
 							loop
+							onLoadedData={handleVideoLoad}
 							onClick={e => openModal(0, e)}
 						>
 							<source

@@ -56,6 +56,7 @@ const images = [
 const NieruchomośćFirst = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
+	const [isVideoLoaded, setIsVideoLoaded] = useState(false)
 
 	const openModal = (index, event) => {
 		event.preventDefault()
@@ -79,6 +80,10 @@ const NieruchomośćFirst = () => {
 		)
 	}
 
+	const handleVideoLoad = () => {
+		setIsVideoLoaded(true)
+	}
+
 	return (
 		<section className={css.houseSection}>
 			<h2 className={css.houseTitle}>
@@ -97,6 +102,7 @@ const NieruchomośćFirst = () => {
 							muted
 							loop
 							preload='auto'
+							onLoadedData={handleVideoLoad}
 							onClick={e => openModal(0, e)}
 						>
 							<source
@@ -112,16 +118,17 @@ const NieruchomośćFirst = () => {
 							Your browser doesn't support video.
 						</video>
 					</SplideSlide>
-					{images.slice(1).map((media, index) => (
-						<SplideSlide key={index + 1}>
-							<img
-								src={media}
-								alt={`Slide ${index + 1}`}
-								className={css.splideImg}
-								onClick={e => openModal(index + 1, e)}
-							/>
-						</SplideSlide>
-					))}
+					{isVideoLoaded &&
+						images.slice(1).map((media, index) => (
+							<SplideSlide key={index + 1}>
+								<img
+									src={media}
+									alt={`Slide ${index + 1}`}
+									className={css.splideImg}
+									onClick={e => openModal(index + 1, e)}
+								/>
+							</SplideSlide>
+						))}
 				</Splide>
 			</div>
 			<div className={css.houseItemContainerSmall}>
