@@ -10,7 +10,7 @@ import image6 from '../../images/House2.6.jpg'
 import image7 from '../../images/House2.7.jpg'
 import image8 from '../../images/House2.8.jpg'
 import image9 from '../../images/House2.9.jpg'
-import video1 from '../../images/House2Video.mp4'
+// import video1 from '../../images/House2Video.mp4'
 import videoMobile from '../../images/House2VideoMob.mp4'
 
 import { ReactComponent as HomeInside } from '../../images/homeInside.svg'
@@ -20,7 +20,7 @@ import ImageModal from '../ImageModal/ImageModal'
 import css from '../NieruchomośćFirst/NieruchomośćFirst.module.css'
 
 const images = [
-	video1,
+	videoMobile,
 	image1,
 	image2,
 	image3,
@@ -35,7 +35,6 @@ const images = [
 const NieruchomośćSecond = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
-	const [isVideoLoaded, setIsVideoLoaded] = useState(false)
 
 	const openModal = (index, event) => {
 		event.preventDefault()
@@ -59,10 +58,6 @@ const NieruchomośćSecond = () => {
 		)
 	}
 
-	const handleVideoLoad = () => {
-		setIsVideoLoaded(true)
-	}
-
 	return (
 		<section className={css.houseSection}>
 			<h2 className={css.houseTitle}>
@@ -80,34 +75,28 @@ const NieruchomośćSecond = () => {
 							playsInline
 							muted
 							loop
-							onLoadedData={handleVideoLoad}
 							onClick={e => openModal(0, e)}
 						>
-							<source
-								src={videoMobile}
-								media='(max-width: 768px)'
-								type='video/mp4'
-							/>
-							<source
+							<source src={videoMobile} type='video/mp4' />
+							{/* <source
 								src={video1}
 								media='(min-width: 769px)'
 								type='video/mp4'
-							/>
+							/> */}
 							Your browser doesn't support video.
 						</video>
 					</SplideSlide>
-					{isVideoLoaded &&
-						images.slice(1).map((media, index) => (
-							<SplideSlide key={index + 1}>
-								<img
-									src={media}
-									alt={`Slide ${index + 1}`}
-									className={css.splideImg}
-									loading='lazy'
-									onClick={e => openModal(index + 1, e)}
-								/>
-							</SplideSlide>
-						))}
+					{images.slice(1).map((media, index) => (
+						<SplideSlide key={index + 1}>
+							<img
+								src={media}
+								alt={`Slide ${index + 1}`}
+								className={css.splideImg}
+								loading='lazy'
+								onClick={e => openModal(index + 1, e)}
+							/>
+						</SplideSlide>
+					))}
 				</Splide>
 			</div>
 			<div className={css.houseItemContainerSmall}>

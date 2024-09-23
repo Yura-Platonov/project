@@ -20,7 +20,7 @@ import image6 from '../../images/House1.6.jpg'
 import image7 from '../../images/House1.7.jpg'
 import image8 from '../../images/House1.8.jpg'
 import image9 from '../../images/House1.9.jpg'
-import video1 from '../../images/House1Video.mp4'
+// import video1 from '../../images/House1Video.mp4'
 import videoMobile from '../../images/House1VideoMob.mp4'
 
 import { ReactComponent as HomeGospodarcha } from '../../images/homeGospodarcha.svg'
@@ -57,8 +57,8 @@ const NieruchomośćFirst = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-	const isMobile = window.innerWidth <= 768
-	const videoSrc = isMobile ? videoMobile : video1
+	// const isMobile = window.innerWidth <= 768
+	// const videoSrc = isMobile ? videoMobile : video1
 
 	const openModal = (index, event) => {
 		event.preventDefault()
@@ -102,7 +102,7 @@ const NieruchomośćFirst = () => {
 							preload='auto'
 							onClick={e => openModal(0, e)}
 						>
-							<source src={videoSrc} type='video/mp4' />
+							<source src={videoMobile} type='video/mp4' />
 							Your browser doesn't support video.
 						</video>
 					</SplideSlide>
