@@ -20,7 +20,7 @@ import image6 from '../../images/House1.6.jpg'
 import image7 from '../../images/House1.7.jpg'
 import image8 from '../../images/House1.8.jpg'
 import image9 from '../../images/House1.9.jpg'
-import video1 from '../../images/MainPageVideo.mp4'
+import video1 from '../../images/House1VideoMob.mp4'
 // import videoMobile from '../../images/House1VideoMob.mp4'
 
 import { ReactComponent as HomeGospodarcha } from '../../images/homeGospodarcha.svg'
