@@ -9,7 +9,7 @@ import image5 from '../../images/House2.5.jpg'
 import image6 from '../../images/House2.6.jpg'
 import image7 from '../../images/House2.7.jpg'
 import image8 from '../../images/House2.8.jpg'
-import image9 from '../../images/House2.9.jpg'
+// import image9 from '../../images/House2.9.jpg'
 // import video1 from '../../images/House2Video.mp4'
 import videoMobile from '../../images/House2VideoMob.mp4'
 
@@ -29,7 +29,6 @@ const images = [
 	image6,
 	image7,
 	image8,
-	image9,
 ]
 
 const NieruchomośćSecond = () => {
