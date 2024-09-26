@@ -8,7 +8,14 @@ const NieruchomośćWelcome = () => {
 	return (
 		<section className={css.welcomeSection}>
 			<h1 className={css.title}>Sprzedaż nieruchomości</h1>
-			<video className={css.welcomeVideo} autoPlay loop muted playsInline>
+			<video
+				className={css.welcomeVideo}
+				autoPlay
+				loop
+				muted
+				preload='auto'
+				playsInline
+			>
 				<source
 					src={NieryhomistPageVideoMob}
 					media='(max-width: 768px)'

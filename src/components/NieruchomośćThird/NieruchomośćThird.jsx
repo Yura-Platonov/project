@@ -2,25 +2,12 @@ import { Splide, SplideSlide } from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import React, { useState } from 'react'
 import image1 from '../../images/House3.1.jpg'
-import image10 from '../../images/House3.10.jpg'
-import image11 from '../../images/House3.11.jpg'
-import image12 from '../../images/House3.12.jpg'
-import image13 from '../../images/House3.13.jpg'
-import image14 from '../../images/House3.14.jpg'
-import image15 from '../../images/House3.15.jpg'
-import image16 from '../../images/House3.16.jpg'
-import image17 from '../../images/House3.17.jpg'
-import image18 from '../../images/House3.18.jpg'
-import image19 from '../../images/House3.19.jpg'
 import image2 from '../../images/House3.2.jpg'
-import image20 from '../../images/House3.20.jpg'
 import image3 from '../../images/House3.3.jpg'
 import image4 from '../../images/House3.4.jpg'
 import image5 from '../../images/House3.5.jpg'
 import image6 from '../../images/House3.6.jpg'
-import image7 from '../../images/House3.7.jpg'
-import image8 from '../../images/House3.8.jpg'
-import image9 from '../../images/House3.9.jpg'
+
 import video1 from '../../images/MainPageVideo.mp4'
 import videoMobile from '../../images/MainPageVideoMob.mp4'
 import { ReactComponent as HomeInside } from '../../images/homeInside.svg'
@@ -29,29 +16,7 @@ import { ReactComponent as HomeStairs } from '../../images/homeStairs.svg'
 import ImageModal from '../ImageModal/ImageModal'
 import css from '../NieruchomośćFirst/NieruchomośćFirst.module.css'
 
-const images = [
-	video1,
-	image1,
-	image2,
-	image3,
-	image4,
-	image5,
-	image6,
-	image7,
-	image8,
-	image9,
-	image10,
-	image11,
-	image12,
-	image13,
-	image14,
-	image15,
-	image16,
-	image17,
-	image18,
-	image19,
-	image20,
-]
+const images = [video1, image1, image2, image3, image4, image5, image6]
 
 const NieruchomośćThird = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)

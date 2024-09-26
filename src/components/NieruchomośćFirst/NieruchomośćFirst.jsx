@@ -5,13 +5,6 @@ import image1 from '../../images/House1.1.jpg'
 import image10 from '../../images/House1.10.jpg'
 import image11 from '../../images/House1.11.jpg'
 import image12 from '../../images/House1.12.jpg'
-import image13 from '../../images/House1.13.jpg'
-import image14 from '../../images/House1.14.jpg'
-import image15 from '../../images/House1.15.jpg'
-import image16 from '../../images/House1.16.jpg'
-import image17 from '../../images/House1.17.jpg'
-import image18 from '../../images/House1.18.jpg'
-import image19 from '../../images/House1.19.jpg'
 import image2 from '../../images/House1.2.jpg'
 import image3 from '../../images/House1.3.jpg'
 import image4 from '../../images/House1.4.jpg'
@@ -20,8 +13,8 @@ import image6 from '../../images/House1.6.jpg'
 import image7 from '../../images/House1.7.jpg'
 import image8 from '../../images/House1.8.jpg'
 import image9 from '../../images/House1.9.jpg'
-import video1 from '../../images/House1Video.mp4'
-import videoMobile from '../../images/House1VideoMob.mp4'
+import video1 from '../../images/House1VideoMob.mp4'
+// import videoMobile from '../../images/House1VideoMob.mp4'
 
 import { ReactComponent as HomeGospodarcha } from '../../images/homeGospodarcha.svg'
 import { ReactComponent as HomeInside } from '../../images/homeInside.svg'
@@ -31,7 +24,7 @@ import ImageModal from '../ImageModal/ImageModal'
 import css from './NieruchomośćFirst.module.css'
 
 const images = [
-	videoMobile,
+	video1,
 	image1,
 	image2,
 	image3,
@@ -44,21 +37,14 @@ const images = [
 	image10,
 	image11,
 	image12,
-	image13,
-	image14,
-	image15,
-	image16,
-	image17,
-	image18,
-	image19,
 ]
 
 const NieruchomośćFirst = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)
 	const [currentImageIndex, setCurrentImageIndex] = useState(0)
 
-	const isMobile = window.innerWidth <= 768
-	const videoSrc = isMobile ? videoMobile : video1
+	// const isMobile = window.innerWidth <= 768
+	// const videoSrc = isMobile ? videoMobile : video1
 
 	const openModal = (index, event) => {
 		event.preventDefault()
@@ -102,7 +88,7 @@ const NieruchomośćFirst = () => {
 							preload='auto'
 							onClick={e => openModal(0, e)}
 						>
-							<source src={videoSrc} type='video/mp4' />
+							<source src={video1} type='video/mp4' />
 							Your browser doesn't support video.
 						</video>
 					</SplideSlide>

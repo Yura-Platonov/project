@@ -9,10 +9,21 @@ import image5 from '../../images/technikaSection1.5.jpg'
 import image6 from '../../images/technikaSection1.6.jpg'
 import image7 from '../../images/technikaSection1.7.jpg'
 import image8 from '../../images/technikaSection1.8.jpg'
+import image9 from '../../images/technikaSection1.9.jpg'
 import ImageModal from '../ImageModal/ImageModal'
 import css from './TechnikaFirst.module.css'
 
-const images = [image1, image2, image3, image4, image5, image6, image7, image8]
+const images = [
+	image1,
+	image2,
+	image3,
+	image4,
+	image5,
+	image6,
+	image7,
+	image8,
+	image9,
+]
 
 const TechnikaFirst = () => {
 	const [isModalOpen, setIsModalOpen] = useState(false)

@@ -6,7 +6,14 @@ import css from './DomyWelcome.module.css'
 const DomyWelcome = () => {
 	return (
 		<section className={css.welcomeSection}>
-			<video className={css.welcomeVideo} autoPlay loop muted playsInline>
+			<video
+				className={css.welcomeVideo}
+				autoPlay
+				preload='auto'
+				loop
+				muted
+				playsInline
+			>
 				<source
 					src={MainPageVideoMob}
 					media='(max-width: 768px)'
