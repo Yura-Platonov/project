@@ -29,12 +29,12 @@ const DomyMain = () => {
 								<span className={css.textAccent}>
 									Firma Havrysh3 Sp. z o.o.
 								</span>{' '}
-								na chwilę obecną zrealizowała lub jest w trakcie realizacji
-								inwestycji własnych o charakterze budownictwa
-								mieszkalnego(budynek jednorodzinny wolnostojący; budynek
-								mieszkalno-usługowy; budynki jednorodzinne dwulokalowe)
-								indywidualnego na terenie województwa Lubuskiego oraz
-								Zachodniopomorskiego.
+								dynamicznie rozwija swoją działalność, realizując inwestycje w
+								zakresie budownictwa mieszkalnego na terenie województw
+								lubuskiego oraz zachodniopomorskiego. Specjalizujemy się w
+								projektach takich jak: domy jednorodzinne wolnostojące, budynki
+								mieszkalno-usługowe oraz dwulokalowe budynki jednorodzinne,
+								dopasowane do indywidualnych potrzeb klientów.
 							</p>
 							<p className={css.text}>
 								Na obrzeżach miasta Gorzów wlkp. W miejscowościach Ulim oraz
