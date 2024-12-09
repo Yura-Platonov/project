@@ -152,7 +152,7 @@ const DomyMain = () => {
 								<p>
 									Zapewniamy kompleksową obsługę inwestycji na terenie
 									województw <b>lubuskiego</b> i <b>zachodniopomorskiego</b>,
-									szczególnie w miastach <b>Gorzów Wielkopolski</b>,
+									szczególnie w miastach <b>Gorzów Wielkopolski</b>,{' '}
 									<b>Zielona Góra</b>, oraz w ich okolicach.{' '}
 									<b>Havrysh3 Sp. z o.o.</b> to niezawodny partner, który
 									sprosta każdemu wyzwaniu w zakresie prac budowlanych i
