@@ -62,9 +62,10 @@ const DomyMain = () => {
 								Dodatkowo, w najbliższym czasie planujemy rozpoczęcie nowej
 								inwestycji o charakterze mieszkaniowym w rejonie{' '}
 								<b>Zielonej Góry</b>, która również będzie odpowiadała
-								najwyższym standardom jakości i funkcjonalności. Zapraszamy do
-								kontaktu i współpracy przy realizacji wymarzonych projektów
-								mieszkaniowych!
+								najwyższym standardom jakości i funkcjonalności. <br />
+								<br />
+								Zapraszamy do kontaktu i współpracy przy realizacji wymarzonych
+								projektów mieszkaniowych!
 							</p>
 							<button className={css.buttonDomy}>
 								<Link to='/zabudowania' className={css.relocateLink}>
