@@ -44,9 +44,10 @@ const DomyMain = () => {
 								W miejscowościach <b>Ulim</b> i <b>Santocko</b>, położonych na
 								obrzeżach <b>Gorzowa Wielkopolskiego</b>, realizujemy aktualnie{' '}
 								<b>sześć budynków mieszkalnych dwulokalowych</b> o nowoczesnej
-								architekturze i zróżnicowanej powierzchni użytkowej. W{' '}
-								<b>Kamieniu Pomorskim</b>, zaledwie 6 km od morza, ukończyliśmy
-								realizację:
+								architekturze i zróżnicowanej powierzchni użytkowej.
+								<br />
+								<br /> W <b>Kamieniu Pomorskim</b>, zaledwie 6 km od morza,
+								ukończyliśmy realizację:
 								<ul className={css.workList}>
 									<li className={css.workItem}>
 										<b>Domy jednorodzinne wolnostojące</b>
