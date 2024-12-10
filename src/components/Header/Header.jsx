@@ -52,6 +52,9 @@ const Header = () => {
 		case '/praca':
 			borderRightClass = css.borderRightKariera
 			break
+		case '/zielona-gòra/praca':
+			borderRightClass = css.borderRightKariera
+			break
 		default:
 			borderRightClass = css.borderRightHome
 	}

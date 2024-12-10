@@ -25,6 +25,10 @@ export const App = () => {
 				<Route path='/' exact element={<Domy />} />
 				<Route path='/zabudowania' element={<Nieruchomość />} />
 				<Route path='/praca' element={<Kariera />} />
+				<Route path='/praca/zielona-gòra' element={<Kariera />} />
+				<Route path='/praca/gorzów-wielkopolski' element={<Kariera />} />
+				<Route path='/praca/budowa' element={<Kariera />} />
+
 				<Route path='/technika' element={<Technika />} />
 			</Routes>
 
