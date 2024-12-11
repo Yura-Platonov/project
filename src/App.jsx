@@ -22,7 +22,7 @@ export const App = () => {
 		<div className={css.app}>
 			<Header />
 			<Routes>
-				<Route path='/' exact element={<Domy />} />
+				<Route path='/strona-glòwna' exact element={<Domy />} />
 				<Route path='/zabudowania' element={<Nieruchomość />} />
 				<Route path='/praca' element={<Kariera />} />
 				<Route path='/praca/zielona-gòra' element={<Kariera />} />

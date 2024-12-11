@@ -19,7 +19,11 @@ const Footer = () => {
 				<nav className={css.navigation}>
 					<ul className={css.navList}>
 						<li className={css.navItem}>
-							<Link to='/' onClick={scrollToTop} className={css.navLink}>
+							<Link
+								to='/strona-glòwna'
+								onClick={scrollToTop}
+								className={css.navLink}
+							>
 								Strona główna
 							</Link>
 							<Link
@@ -66,7 +70,7 @@ const Footer = () => {
 				ul. Franciszka Walczaka 114, 66-400 Gorzów Wielkopolski
 			</a>
 			<div className={css.containerColumnSecond}>
-				<Link to='/'>
+				<Link to='/strona-glòwna'>
 					<Logo />
 				</Link>
 				<div className={css.socialMediaContainer}>
