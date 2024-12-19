@@ -22,7 +22,7 @@ const Header = () => {
 
 	let borderBottomClass
 	switch (location.pathname) {
-		case '/strona-glòwna':
+		case '/':
 			borderBottomClass = css.borderBottomHome
 			break
 		case '/zabudowania':
@@ -40,7 +40,7 @@ const Header = () => {
 
 	let borderRightClass
 	switch (location.pathname) {
-		case '/strona-glòwna':
+		case '/':
 			borderRightClass = css.borderRightHome
 			break
 		case '/zabudowania':
@@ -63,16 +63,12 @@ const Header = () => {
 		<header className={css.header}>
 			<div className={borderBottomClass}></div>
 			<div className={css.borderBottom}></div>
-			<Link to='/strona-glòwna'>
+			<Link to='/'>
 				<Logo className={css.logo} />
 			</Link>
 			<nav className={css.navigation}>
 				<div className={css.navList}>
-					<NavLink
-						to='/strona-glòwna'
-						onClick={scrollToTop}
-						className={css.navLink}
-					>
+					<NavLink to='/' onClick={scrollToTop} className={css.navLink}>
 						Strona główna
 					</NavLink>
 					<NavLink
@@ -100,7 +96,7 @@ const Header = () => {
 					<ul className={css.mobileNavList}>
 						<li className={css.mobileNavItem}>
 							<NavLink
-								to='/strona-glòwna'
+								to='/'
 								onClick={() => {
 									scrollToTop()
 									setMenuOpen(false)
