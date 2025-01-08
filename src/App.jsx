@@ -10,6 +10,7 @@ import ModalFormButtonOpen from './images/ModalFormOpen.svg'
 import Domy from './pages/Domy/Domy'
 import Kariera from './pages/Kariera/Kariera'
 import Nieruchomość from './pages/Nieruchomość/Nieruchomość'
+import NotFound from './pages/NotFound/NotFound'
 import Technika from './pages/Technika/Technika'
 
 Modal.setAppElement('#root')
@@ -28,8 +29,8 @@ export const App = () => {
 				<Route path='/praca/zielona-gòra' element={<Kariera />} />
 				<Route path='/praca/gorzów-wielkopolski' element={<Kariera />} />
 				<Route path='/praca/budowa' element={<Kariera />} />
-
 				<Route path='/technika' element={<Technika />} />
+				<Route path='*' element={<NotFound />} />
 			</Routes>
 
 			<button className={css.fixedButton} onClick={toggleModal}>
